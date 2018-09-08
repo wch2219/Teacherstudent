@@ -81,13 +81,17 @@ public class DownService extends Service{
     public void Event(MessageEvent messageEvent) {
         final String vid = messageEvent.getVid();
         int bitRate = messageEvent.getBitRate();
+        downListener(vid, bitRate);
+    }
+
+    private void downListener(final String vid, int bitRate) {
         PolyvDownloader downloader = PolyvDownloaderManager.getPolyvDownloader(vid, bitRate);
         downloader.start(ctx);
         downloader.setPolyvDownloadProressListener(new IPolyvDownloaderProgressListener() {
             @Override
             public void onDownload(long l, long l1) {
-                WcHLogUtils.I(l+"----"+l1);
-                PolyvDownloadSQLiteHelper.getInstance(ctx).updateProgress(l,l1, (int) ((l/l1)*100),vid);
+                WcHLogUtils.I(l+"----"+l1+"------"+(((l%l1))));
+                PolyvDownloadSQLiteHelper.getInstance(ctx).updateProgress(l,l1, (int) ((l%l1)),vid);
             }
 
             @Override
@@ -112,6 +116,7 @@ public class DownService extends Service{
             }
         });
     }
+
     /**
      * 服务销毁时的回调
      */
@@ -127,36 +132,7 @@ public class DownService extends Service{
         if (isAll) {
             PolyvDownloaderManager.startAll(ctx);
         }else{
-            PolyvDownloader downloader = PolyvDownloaderManager.getPolyvDownloader(vid, bitrate);
-            downloader.start(ctx);
-            downloader.setPolyvDownloadProressListener(new IPolyvDownloaderProgressListener() {
-                @Override
-                public void onDownload(long l, long l1) {
-                    WcHLogUtils.I(l+"----"+l1);
-                    PolyvDownloadSQLiteHelper.getInstance(ctx).updateProgress(l,l1, (int) ((l/l1)*100),vid);
-                }
-
-                @Override
-                public void onDownloadSuccess() {
-                    if (successbackListener != null) {
-                        successbackListener.success();
-                    }
-                    PolyvDownloadSQLiteHelper.getInstance(ctx).updateProgress(100,100, 100,vid);
-//                    showNotifi();
-                    Toast.makeText(ctx, "下载完成", Toast.LENGTH_SHORT).show();
-                }
-
-                @Override
-                public void onDownloadFail(@NonNull PolyvDownloaderErrorReason polyvDownloaderErrorReason) {
-                    Toast.makeText(ctx, polyvDownloaderErrorReason.toString(), Toast.LENGTH_SHORT).show();
-                }
-            });
-            downloader.setPolyvDownloadSpeedListener(new IPolyvDownloaderSpeedListener() {
-                @Override
-                public void onSpeed(int i) {
-                    WcHLogUtils.I(i+"下载速度");
-                }
-            });
+            downListener(vid, bitrate);
         }
     }
     public void showNotifi(){

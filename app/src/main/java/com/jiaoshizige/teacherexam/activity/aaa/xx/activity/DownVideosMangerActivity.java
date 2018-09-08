@@ -76,6 +76,12 @@ public class DownVideosMangerActivity extends AppCompatActivity implements DownM
         toolbarSubtitle.setText("管理");
         toolbarSubtitle.setTextColor(getResources().getColor(R.color.blue));
         initTabBar();
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         getAll();
     }
 

@@ -29,7 +29,7 @@ import butterknife.OnClick;
 /**
  * 下载管理children
  */
-public class DownManagerProssActivity extends AppCompatActivity implements DownManagerproAdapter.CheckListener {
+public class DownManagerProssActivity extends AppCompatActivity implements DownManagerproAdapter.CheckListener,DownManagerproAdapter.DownSpenListener{
 
     @BindView(R.id.back_im)
     TextView backIm;
@@ -82,9 +82,15 @@ public class DownManagerProssActivity extends AppCompatActivity implements DownM
         toolbarSubtitle.setTextColor(getResources().getColor(R.color.blue));
         LinearLayoutManager manager = new LinearLayoutManager(ctx);
         rvList.setLayoutManager(manager);
+
+        showData();
+    }
+
+    private void showData() {
         allChapter = PolyvDownloadSQLiteHelper.getInstance(ctx).getAllChapter(course_id);
         downManagerproAdapter = new DownManagerproAdapter(ctx, allChapter);
         downManagerproAdapter.setCheckListener(this);
+        downManagerproAdapter.setDownSpenListener(this);
         rvList.setAdapter(downManagerproAdapter);
     }
 
@@ -199,5 +205,10 @@ public class DownManagerProssActivity extends AppCompatActivity implements DownM
 
 
         downManagerproAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void upUi() {
+        showData();
     }
 }

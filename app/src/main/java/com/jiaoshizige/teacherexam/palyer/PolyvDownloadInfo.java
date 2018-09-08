@@ -30,6 +30,7 @@ public class PolyvDownloadInfo implements Serializable {
     private String type;
     private String learn_time;
     private boolean check;
+    private long downspend;
     public PolyvDownloadInfo(){}
 
     public PolyvDownloadInfo(String vid, String duration, long filesize, int bitrate, String title,int progress,String chapter) {
@@ -203,6 +204,14 @@ public class PolyvDownloadInfo implements Serializable {
         this.learn_time = learn_time;
     }
 
+    public long getDownspend() {
+        return downspend;
+    }
+
+    public void setDownspend(long downspend) {
+        this.downspend = downspend;
+    }
+
     @Override
     public String toString() {
         return "PolyvDownloadInfo{" +
@@ -213,17 +222,20 @@ public class PolyvDownloadInfo implements Serializable {
                 ", title='" + title + '\'' +
                 ", percent=" + percent +
                 ", total=" + total +
-                ", progress=" + progress +
                 ", chapter='" + chapter + '\'' +
-                ", classname='" + classname + '\'' +
                 ", chapter_id='" + chapter_id + '\'' +
                 ", section_id='" + section_id + '\'' +
                 ", section_name='" + section_name + '\'' +
-                ", learn_time='" + learn_time + '\'' +
-                ", class_id=" + class_id +
-                ", parent_id=" + parent_id +
+                ", progress=" + progress +
                 ", course_id=" + course_id +
-                ", type=" + type  + '\'' +
+                ", parent_id=" + parent_id +
+                ", sid=" + sid +
+                ", classname='" + classname + '\'' +
+                ", class_id=" + class_id +
+                ", type='" + type + '\'' +
+                ", learn_time='" + learn_time + '\'' +
+                ", check=" + check +
+                ", downspend=" + downspend +
                 '}';
     }
 }

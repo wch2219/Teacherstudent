@@ -15,6 +15,7 @@ import com.jiaoshizige.teacherexam.R;
 import com.jiaoshizige.teacherexam.activity.aaa.xx.bean.ChapterBean;
 import com.jiaoshizige.teacherexam.activity.aaa.xx.utils.FormatUtil;
 import com.jiaoshizige.teacherexam.activity.aaa.xx.utils.MessageEvent;
+import com.jiaoshizige.teacherexam.activity.aaa.xx.utils.WcHLogUtils;
 import com.jiaoshizige.teacherexam.palyer.PolyvDownloadInfo;
 import com.jiaoshizige.teacherexam.palyer.PolyvDownloadSQLiteHelper;
 import com.zhy.adapter.recyclerview.CommonAdapter;
@@ -70,11 +71,16 @@ public class DownManagerproAdapter extends RecyclerView.Adapter<DownManagerproAd
                     PolyvDownloader downloader = PolyvDownloaderManager.getPolyvDownloader(polyvDownloadInfo.getVid(), polyvDownloadInfo.getBitrate());
                     if (downloader.isDownloading()) {//正在下载
                         DOWNTYPE = DOWNING;
+                        WcHLogUtils.I("显示速度:"+polyvDownloadInfo.getDownspend()+"------下载进度:"+polyvDownloadInfo.getProgress());
+                        holder.setText(R.id.tv_downType, FormatUtil.sizeFormatNum2String(polyvDownloadInfo.getDownspend()));
                         downloader.setPolyvDownloadSpeedListener(new IPolyvDownloaderSpeedListener() {
                             @Override
                             public void onSpeed(int i) {
-                                holder.setText(R.id.tv_downType, FormatUtil.sizeFormatNum2String(i));
-                                DownManagerproAdapter.this.notifyDataSetChanged();
+                                WcHLogUtils.I("下载速度"+i);
+                                PolyvDownloadSQLiteHelper.getInstance(ctx).upDownSpan(i,polyvDownloadInfo.getVid(),polyvDownloadInfo.getBitrate());
+                                if (downSpenListener != null) {
+                                    downSpenListener.upUi();
+                                }
                             }
                         });
                     } else {
@@ -104,6 +110,9 @@ public class DownManagerproAdapter extends RecyclerView.Adapter<DownManagerproAd
                             EventBus.getDefault().post(new MessageEvent(polyvDownloadInfo.getVid(),polyvDownloadInfo.getBitrate()));
                         }else if (checkListener != null) {
                             checkListener.checkPosition(position, parentposition);
+                        }
+                        if (downSpenListener != null) {
+                            downSpenListener.upUi();
                         }
                     }
                 });
@@ -144,5 +153,15 @@ public class DownManagerproAdapter extends RecyclerView.Adapter<DownManagerproAd
     public void setCheckListener(CheckListener checkListener) {
         this.checkListener = checkListener;
 
+    }
+
+    private DownSpenListener downSpenListener;
+
+    public interface DownSpenListener {
+        void upUi();
+    }
+
+    public void setDownSpenListener(DownSpenListener downSpenListener){
+        this.downSpenListener = downSpenListener;
     }
 }

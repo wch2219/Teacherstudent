@@ -32,7 +32,6 @@ import java.util.List;
  * Created by Administrator on 2018/9/4.
  * 视频下载界面
  */
-
 public class VideoDownAdapter extends RecyclerView.Adapter<VideoDownAdapter.ViewHolder> {
     private List<NewCourseListBean.DataBean.CourseListBean> course_list;
     private Context ctx;

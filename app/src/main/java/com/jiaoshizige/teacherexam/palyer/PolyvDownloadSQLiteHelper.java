@@ -38,7 +38,7 @@ public class PolyvDownloadSQLiteHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(
-                "create table if not exists downloadlist(vid varchar(20),title varchar(100),duration varchar(20),filesize int,bitrate int,percent int default 0,total int default 0,chapter varchar(100),chapter_id varchar(10),section_id varchar(10),section_name varchar(10),learn_time varchar(100),progress int default 0,parent_id int,classname varchar(100),type varchar(10),course_id int,sid int,primary key (vid, bitrate))");
+                "create table if not exists downloadlist(vid varchar(20),title varchar(100),duration varchar(20),filesize int,bitrate int,percent int default 0,total int default 0,chapter varchar(100),chapter_id varchar(10),section_id varchar(10),section_name varchar(10),learn_time varchar(100),progress int default 0,parent_id int,classname varchar(100),type varchar(10),course_id int,sid int,downspend int,primary key (vid, bitrate))");
 
         db.execSQL(
                 "create table if not exists downmanagerlist(id int,course_id int,covermap varchar(20),title varchar(20),primary key (id)) ");
@@ -241,6 +241,28 @@ public class PolyvDownloadSQLiteHelper extends SQLiteOpenHelper {
     }
 
     /**
+     * 更新下载进度
+     * @param span
+     * @param vid
+     * @param bitrate
+     */
+    public void upDownSpan (int span,String vid,int bitrate){
+        SQLiteDatabase db = getWritableDatabase();
+        String sql = "update downloadlist set downspend=? where vid=? and bitrate=?";
+        db.execSQL(sql,new Object[]{span,vid,bitrate});
+    }
+
+    public void getDownSpan(String vid,int bitrate){
+        SQLiteDatabase db = getWritableDatabase();
+        String sql = "select downspend from downloadlist where vid=? and bitrate=?";
+        Cursor cursor = db.rawQuery(sql, new String[]{vid, String.valueOf(bitrate)});
+        while (cursor.moveToNext()){
+            cursor.getInt(cursor.getColumnIndex("downspend"));
+
+
+        }
+    }
+    /**
      * 判断该下载信息是否已以添加过
      *
      * @param info
@@ -281,7 +303,7 @@ public class PolyvDownloadSQLiteHelper extends SQLiteOpenHelper {
     public PolyvDownloadInfo getInfo(String id) {
         SQLiteDatabase db = getWritableDatabase();
         PolyvDownloadInfo info = null;
-        String sql = "select vid,title,duration,filesize,bitrate,percent,total,progress,chapter,chapter_id,section_id,section_name,learn_time,classname,type,parent_id,course_id,sid from downloadlist where vid=?";
+        String sql = "select * from downloadlist where vid=?";
         Cursor cursor = null;
         try {
             cursor = db.rawQuery(sql, new String[]{id});
@@ -304,6 +326,7 @@ public class PolyvDownloadSQLiteHelper extends SQLiteOpenHelper {
                 String section_id = cursor.getString(cursor.getColumnIndex("section_id"));
                 String section_name = cursor.getString(cursor.getColumnIndex("section_name"));
                 String learn_time = cursor.getString(cursor.getColumnIndex("learn_time"));
+                int downspend = cursor.getInt(cursor.getColumnIndex("downspend"));
                 String type = cursor.getString(cursor.getColumnIndex("type"));
 //                int class_id = cursor.getInt(cursor.getColumnIndex("class_id"));
                 int sid = cursor.getInt(cursor.getColumnIndex("sid"));
@@ -322,6 +345,7 @@ public class PolyvDownloadSQLiteHelper extends SQLiteOpenHelper {
                 info.setSection_name(section_name);
                 info.setLearn_time(learn_time);
                 info.setType(type);
+                info.setDownspend(downspend);
 //                info.setClass_id(class_id);
             }
         } finally {
