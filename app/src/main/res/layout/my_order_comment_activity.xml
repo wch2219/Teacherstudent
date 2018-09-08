@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/normal_bg" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginTop="15dp"
+                    android:text="商品详情"
+                    android:textColor="@color/text_color6"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/course_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_20"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@string/course_name"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/sp_16" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/normal_bg" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="为课程服务打分"
+                            android:textColor="@color/text_color6"
+                            android:textSize="@dimen/sp_14" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/normal_bg" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:gravity="center">
+
+                    <!-- <RatingBar
+                         android:id="@+id/ratingBar"
+                         style="@style/roomRatingBar1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="30dp"
+                         android:background="@color/white"
+                         android:numStars="5"
+                         android:progressTint="#F6A623"
+                         android:rating="2.5" />-->
+                    <com.jiaoshizige.teacherexam.widgets.RatingBar
+                        android:id="@+id/ratingBar"
+                        android:layout_toRightOf="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:starCount="5"
+                        app:starEmpty="@mipmap/common_star_gray_big"
+                        app:starFill="@mipmap/common_star_orang_big"
+                        app:starHalf="@mipmap/common_star_half_big"
+                        app:starImageSize="35dp"
+                        app:starPadding="10dp"
+                        app:starStep="5"
+                        app:stepSize="Half">
+
+                    </com.jiaoshizige.teacherexam.widgets.RatingBar>
+
+                </RelativeLayout>
+                <View
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/normal_bg"/>
+
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+                   <com.nex3z.flowlayout.FlowLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="@dimen/margin_20"
+                       android:layout_marginLeft="@dimen/dp_15"
+                       android:layout_marginRight="@dimen/dp_15"
+                       android:id="@+id/flow_layout"
+                       app:childSpacing="6dp"
+                       app:rowSpacing="8dp"
+                       app:rtl="false"
+                       app:flow="true"
+                       ></com.nex3z.flowlayout.FlowLayout>
+               </RelativeLayout>
+                <View
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/normal_bg"/>
+                <EditText
+                    android:id="@+id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:gravity="left|top"
+                    android:textSize="@dimen/text_size14"
+                    android:hint="请输入评价内容，最多300字"
+                    android:lines="5"
+                    android:background="@null"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/normal_bg"/>
+
+                <com.jiaoshizige.teacherexam.widgets.MScrollerGridView
+                    android:id="@+id/add_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:alpha="0.9"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:horizontalSpacing="15dp"
+                    android:numColumns="4"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:paddingRight="@dimen/dp_15" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_commit"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_15"
+                android:background="@drawable/purple_shape"
+                android:text="提交评价"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

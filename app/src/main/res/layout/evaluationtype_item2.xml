@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/normal_bg">
+    <include layout="@layout/toolbar_layout"></include>
+<RadioGroup
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/typerg"
+    android:paddingLeft="@dimen/margin_15"
+    android:paddingRight="@dimen/margin_15"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <RadioButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:id="@+id/child"
+        android:layout_marginTop="0.5dp"
+        android:drawableRight="@drawable/choice_type_select"
+        android:background="@drawable/choice_type_bg_select"
+        android:text="@string/child"/>
+    <RadioButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:id="@+id/primary_sc"
+        android:layout_marginTop="0.5dp"
+        android:drawableRight="@drawable/choice_type_select"
+        android:background="@drawable/choice_type_bg_select"
+        android:text="@string/primary_sc"/>
+    <RadioButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:id="@+id/junior_middle_sc"
+        android:layout_marginTop="0.5dp"
+        android:drawableRight="@drawable/choice_type_select"
+        android:background="@drawable/choice_type_bg_select"
+        android:text="@string/junior_middle_sc"/>
+    <RadioButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:id="@+id/high_sc"
+        android:layout_marginTop="0.5dp"
+        android:drawableRight="@drawable/choice_type_select"
+        android:background="@drawable/choice_type_bg_select"
+        android:text="@string/high_sc"/>
+</RadioGroup>
+</LinearLayout>

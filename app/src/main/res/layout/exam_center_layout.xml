@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_layout"></include>
+
+        <TextView
+            android:id="@+id/serial_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30"
+            android:gravity="center"
+            android:text="1/13"
+            android:textColor="@color/text_color6"
+            android:textSize="12sp" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:maxHeight="4.0dip"
+            android:progress="1"
+            android:progressDrawable="@drawable/sb_bar"
+            android:thumb="@mipmap/point" />
+
+        <com.jiaoshizige.teacherexam.widgets.ViewPagerHeigth
+            android:id="@+id/exam_viewpager"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nextorsubmit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="80dp"
+            android:layout_height="32dp"
+            android:background="@drawable/purple_shape"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/last0rnext"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/last"
+                android:layout_width="80dp"
+                android:layout_height="32dp"
+                android:background="@drawable/frame_shape_purple"
+                android:text="@string/pre"
+                android:textColor="@color/purple4" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="80dp"
+                android:layout_height="32dp"
+                android:background="@drawable/purple_shape"
+                android:text="@string/next"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

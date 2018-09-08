@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/margin_15"
+    android:id="@+id/activity_ly"
+    android:background="@color/normal_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_15">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/first_icon"
+                    />
+            <TextView
+                android:id="@+id/activity_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:text="新用户注册200优惠券"
+                android:textColor="@color/text_color6"
+                android:textSize="@dimen/text_size14" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+               android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/activity_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="5个活动"
+                    android:textColor="@color/text_color6"
+                    android:textSize="@dimen/text_size14" />
+
+                <ToggleButton
+                    android:id="@+id/activity_switch"
+                    android:layout_width="20dp"
+                    android:layout_height="12dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center|center_vertical"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:drawableRight="@drawable/activity_open_close_selected"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:id="@+id/second_activity_ly"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/second_icon"
+               />
+        <TextView
+            android:id="@+id/activity_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:text="100元以上的课程 下单建20元" />
+            </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/hide_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:scrollbars="none"
+            android:visibility="gone"></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+</LinearLayout>

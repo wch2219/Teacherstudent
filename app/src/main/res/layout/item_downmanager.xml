@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:id="@+id/ll_parent"
+    android:layout_height="wrap_content">
+    <CheckBox
+        android:id="@+id/cb_check"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:button="@null"
+        android:background="@drawable/slete_check_type"
+        android:visibility="gone"
+        android:layout_gravity="center_vertical"
+        />
+    <ImageView
+        android:layout_width="123dp"
+        android:layout_height="69dp"
+        android:layout_margin="@dimen/margin_5"
+        android:id="@+id/iv_pic"
+        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="201章节精讲"
+                android:id="@+id/tv_title"
+                android:textColor="#333333"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/ll_down"
+                android:visibility="visible"
+                >
+                <TextView
+                    android:id="@+id/tv_smalltitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="学前儿童儿童儿童儿童..."
+                    android:textSize="@dimen/text_size11"
+                    android:textColor="#666"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="已暂停"
+                        android:layout_weight="1"
+                        android:id="@+id/tv_downType"
+                        />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="160M"
+                            android:id="@+id/t_filesize"
+                            />
+
+
+
+                </LinearLayout>
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:progress="20"
+                    android:id="@+id/progress"
+                    android:layout_weight="1" />
+            </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_downsuccess"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="已缓存3节"
+                    />
+        </LinearLayout>
+</LinearLayout>

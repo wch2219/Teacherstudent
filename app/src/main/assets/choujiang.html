@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059) ApiUrl.BASEIMAGE +api/v1/jiang_rand?user_id=67 -->
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport"
+          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width">
+    <!--<meta name="viewport" content=" width=750,user-scalable=no,"/>-->
+    <title>抽奖</title>
+    <link rel="stylesheet" href="./抽奖_files/aui.css" type="text/css">
+    <link rel="stylesheet" href="./抽奖_files/my.css" type="text/css">
+    <script type="text/javascript" src="./抽奖_files/jquery-2.1.3.min.js.下载"></script>
+    <script type="text/javascript" src="./抽奖_files/awardRotate.js.下载"></script>
+    <script type="text/javascript">
+ function callJS(){
+      alert("Android调用了JS的callJS方法");
+      return 6;
+   }
+        $(function (){
+            var bRotate = false;
+            var rotateFn = function (awards, angles, txt){
+                bRotate = !bRotate;
+                $('#rotate').stopRotate();
+                $('#rotate').rotate({
+                    angle:0,
+                    animateTo:angles+1800,
+                    duration:3000,
+                    callback:function (){
+                       $.post( ApiUrl.BASEIMAGE +"api/v1/jiang_info",{j_id:txt,user_id:67},function(results){
+                            var obj = eval('(' + results + ')'); 
+                            $(".result .name").text(obj.name);//修改弹出红包的内容
+                            $(".result .money").text(obj.price);//修改弹出红包的内容
+                            $(".result .care").text(obj.care);//修改弹出红包的内容
+                            $(".result .time").text(obj.end_time);//修改弹出红包的内容
+                            $(".result").show();
+                        });
+                        
+                        bRotate = !bRotate;
+                    }
+                })
+            };
+
+            $('.center_text').click(function (){
+                if(bRotate)return;
+                var item = 1;
+                $.post( ApiUrl.BASEIMAGE +"api/v1/j_rand",{},function(results){
+                    item = results;
+                });
+                
+                switch (item) {
+                    case 1:
+                        rotateFn(1, 30, '1');
+                        break;
+                    case 2:
+                        rotateFn(2, 270, '2');
+                        break;
+                    case 3:
+                        rotateFn(3, 330, '3');
+                        break;
+                    case 4:
+                        rotateFn(4, 150, '4');
+                        break;
+                    case 5:
+                        rotateFn(5, 210, '5');
+                        break;
+                    case 6:
+                        rotateFn(6, 90, '6');
+                        break;
+                }
+            });
+            $(".result .close").on("click",function(){
+                $(".result").hide();
+            })
+            //聊天内容滚动
+            var $ulist=$("#scroll_chat ul"),timer=null;
+            $ulist.hover(function(){
+                clearInterval(timer);
+            },function(){
+                timer=setInterval(function(){
+                    scrollList($ulist);
+                },1000)
+            }).trigger("mouseleave");
+        });
+        function scrollList(obj){
+            var scrollHeight=obj.find('li').eq(0).height()+20;
+            obj.stop().animate({
+                marginTop:-scrollHeight
+            },600,function(){
+                obj.css({marginTop:0}).find('li').eq(0).appendTo(obj);
+            })
+        }
+        function rnd(n, m){
+            <!--return Math.floor(Math.random()*(m-n+1)+n)-->
+             alert("Android调用了JS的callJS方法"+Math.floor(Math.random()*(m-n+1)+n));
+        }
+        function callAndroid(){
+            /*约定的url协议为：js://webview?arg1=111&arg2=222*/
+            document.location = "js://webview?arg1=111&arg2=222";
+         }
+
+
+
+
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <div class="close"><span class="icons"></span></div>
+        <div class="img">
+            <img src="./抽奖_files/text.png" alt="">
+        </div>
+    </div>
+    <div class="main">
+        <div class="turntable-bg">
+            <div class="img">
+                <img src="./抽奖_files/rotate_bg.png" alt="">
+            </div>
+            <!--<div class="mask"><img src="images/award_01.png"/></div>-->
+            <div class="pointer img">
+                <img src="./抽奖_files/center.png" alt="pointer">
+            </div>
+            <div class="center_text img">
+                <img src="./抽奖_files/center_text.png" alt="center_text">
+            </div>
+            <div class="rotate img"><img id="rotate" src="./抽奖_files/rotate1.png" alt="turntable">
+            </div>
+        </div>
+        <div class="list">
+            <div class="dfx j_between aui-margin-b-5">
+                <h2 class="title">中奖名单</h2>
+                <div class="num">累计<span>2</span>人中奖</div>
+            </div>
+            <div id="scroll_chat">
+                <ul style="margin-top: -23.2538px;">
+
+
+                    <li class="dfx items_center">
+                        <div class="name"></div>
+                        <div class="text flex1">201考点精讲班</div>
+                        <div class="time">2018-04-03 09:12:18</div>
+                    </li>
+                    <li class="dfx items_center">
+                        <div class="name">测试</div>
+                        <div class="text flex1">20元代金券</div>
+                        <div class="time">2018-03-27 10:20:01</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="gz">
+            <h2 class="title">抽奖规则 <span class="icons"></span></h2>
+            <div class="content">
+                <p>1、连续七天签到可获得抽奖一次</p>
+                <p>2、连续七天签到可获得抽奖一次</p>
+                <p>3、连续七天签到可获得抽奖一次</p>
+                <p>4、连续七天签到可获得抽奖一次</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>签到抽奖所有解释权归中冠教育所有</p>
+    </div>
+    <button type="button" id="button1" onclick="callAndroid()">点击调用Android代码</button>
+    <div class="result">
+        <div class="result_content">
+            <div class="img">
+                <img src="./抽奖_files/hongbao.png" alt="">
+            </div>
+            <div class="close"></div>
+            <div class="jx_content">
+                <div class="jx_text">
+                    <div>¥ <span class="money">10</span></div>
+                    <div class="name">201考点精讲班</div>
+                    <div class="care">班级订单满100元减10元</div>
+                </div>
+                <p class="time">有效期至2019-09-09</p>
+                <div class="btn"><a href="https://wxapi.zgclass.com/">立即使用</a></div>
+                <p>可在 <a href="https://wxapi.zgclass.com/">“我的卡劵”</a> 里查看</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

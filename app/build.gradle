@@ -1,0 +1,199 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+//     signingConfigs {
+//         debugConfig {
+//             keyAlias 'zhongguanzhaojiao'
+//             keyPassword 'zhongguan'
+//             storeFile file('D:/I_code/Keystore')
+//             storePassword 'zhongguan'
+//         }
+//         testConfig {
+//             keyAlias 'zhongguanzhaojiao'
+//             keyPassword 'zhongguan'
+//             storeFile file('D:/I_code/Keystore')
+//             storePassword 'zhongguan'
+//         }
+//         releaseConfig {
+//             keyAlias 'zhongguanzhaojiao'
+//             keyPassword 'zhongguan'
+//             storeFile file('D:/I_code/Keystore')
+//             storePassword 'zhongguan'
+//         }
+//     }
+    signingConfigs {
+//        release {
+//
+//            keyAlias '中冠网校'
+//            keyPassword 'zhongguan'
+//            storeFile file('C:/Users/Administrator/Desktop/key/Keystore.jks')
+//            storePassword 'zhongguan'
+//        }
+//        debug {
+//            keyAlias '中冠网校'
+//            keyPassword 'zhongguan'
+//            storeFile file('C:/Users/Administrator/Desktop/key/debug.jks')
+//            storePassword 'zhongguan'
+//        }
+        release {
+            keyAlias '教师资格证'
+            keyPassword 'jiaoshi'
+            storeFile file('D:/StartKit/安卓/上传资料/教师资格证上传资料/教师资格证key/Keystore')
+            storePassword 'jiaoshi'
+        }
+    }
+    compileSdkVersion 27
+    buildToolsVersion "25.0.3"
+//    aaptOptions.cruncherEnabled = false
+//    aaptOptions.useNewCruncher = false
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+    defaultConfig {
+//        applicationId "com.zhongguan.zhongguan"
+        applicationId "com.jiaoshizige.teacherexam"
+//        applicationId "com.zhongguanzhaojiao"
+        minSdkVersion 17
+        targetSdkVersion 27
+        versionCode 6080
+        versionName "6.0.8.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+            // 还可以添加 'x86',  'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "c754c4a3454f38eef257b51a", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    buildTypes {
+        /*  debug {
+              //实现自动签名
+              signingConfig signingConfigs.releaseConfig
+          }
+  //        //测试环境
+          Test {
+              signingConfig signingConfigs.testConfig
+          }*/
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.releaseConfig
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+    sourceSets {
+        main {
+            jni.srcDirs = []
+            jniLibs.srcDirs = ["libs"]
+//            jniLibs.srcDirs = ["src/main/libs"]
+        }
+    }
+    repositories {
+        flatDir { dirs 'libs' }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+    dexOptions {
+        maxProcessCount 4
+        javaMaxHeapSize "2g"
+    }
+    //修改输出apk的名称
+    android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile;
+            if (outputFile != null && outputFile.name.endsWith(".apk")) {
+                //这里修改apk文件名
+                def fileName = "zhonggun-${versionName}-${releaseTime()}.apk";
+                output.outputFile = new File(outputFile.parent, fileName);
+            }
+        }
+    }
+}
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support.constraint:constraint-layout:1.1.2'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'homhomlin.lib:apsts:1.8.0'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    //    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'org.xutils:xutils:3.3.26'
+    compile 'com.google.code.gson:gson:2.2.4'
+    testCompile 'junit:junit:4.12'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    //    compile 'com.android.support:design:23.3.0'
+    compile 'me.zhouzhuo.zzhorizontalprogressbar:zz-horizontal-progressbar:1.0.0'
+    compile 'com.jwenfeng.pulltorefresh:library:1.2.5'
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+    //    compile 'com.jwenfeng.pulltorefresh:library:1.2.5'
+    //集成的recycleview 和adapter
+    //ForRecyclerView
+    compile 'com.zhy:base-rvadapter:3.0.3'
+    //ForListView
+    compile 'com.zhy:base-adapter:3.0.3'
+    compile files('libs/alipaySdk-20170922.jar')
+    compile 'com.nex3z:flow-layout:0.1.2'
+    //微信
+    //    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.github.LuckSiege.PictureSelector:picture_library:v2.1.1'
+    compile 'com.android.support:recyclerview-v7:25.1.0'
+    //地区选择器
+    compile 'liji.library.dev:citypickerview:2.1.2'
+    //推送
+    compile 'cn.jiguang.sdk:jpush:3.1.0'
+    compile 'cn.jiguang.sdk:jcore:1.1.8'
+    compile(name: 'AlivcPlayer', ext: 'aar')
+    compile(name: 'AliyunVodPlayer', ext: 'aar')
+    dependencies { compile 'com.android.support:multidex:1.0.1' }
+    compile project(':IMLib')
+    //    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile files('libs/umeng_social_api.jar')
+    compile 'com.android.support:support-annotations:23+'
+    compile files('libs/alicloud-android-sdk-httpdns-1.1.0.jar')
+    compile files('libs/polyvSub2.0.6.jar')
+    compile files('libs/danmaku-flame-master-0.6.2.jar')
+    compile files('libs/polyvDownloadSources2.0.6.jar')
+    compile files('libs/polyvUpload2.0.6.jar')
+    compile 'com.jwenfeng.pulltorefresh:library:1.0.3'
+    compile 'com.loopj.android:android-async-http:1.4.5'
+    compile 'com.zhaozhibo.guideview:guideview:1.0.6'
+    //友盟统计
+    compile 'com.umeng.sdk:common:latest.integration'
+    compile 'com.umeng.sdk:analytics:latest.integration'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.wuxiaolong.pullloadmorerecyclerview:library:1.0.4'
+    //消息提示红点
+    compile 'q.rorbin:badgeview:1.1.3'
+    compile 'cn.finalteam:okhttpfinal:2.0.7'
+    compile 'com.android.support:cardview-v7:27.1.1'
+    compile 'com.j256.ormlite:ormlite-android:4.48'
+    compile 'com.alibaba:fastjson:1.1.70.android'
+    compile 'com.youth.banner:banner:1.4.10'
+}

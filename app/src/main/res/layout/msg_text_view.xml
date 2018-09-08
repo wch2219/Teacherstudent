@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_10"
+        android:gravity="center_vertical"
+        >
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/photo"
+        />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/qipao"
+    android:gravity="center_vertical"
+    android:layout_toRightOf="@id/photo"
+    android:paddingTop="1dp"
+    android:paddingBottom="1dp"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingRight="@dimen/dp_10"
+    android:layout_marginLeft="@dimen/margin_10"
+    >
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_color6"
+        android:text="sssss"
+        android:visibility="gone"
+        android:textSize="@dimen/text_size14"/>
+    <TextView
+        android:id="@+id/msg_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/username"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_color3"
+        android:text="sdsdsdsdssdsdsdsdsdsdsdsdsdsdsdsdsdsdsdd"
+        android:textSize="@dimen/text_size14"/>
+</LinearLayout>
+   </LinearLayout>
+</merge>

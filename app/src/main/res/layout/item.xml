@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:layout_centerHorizontal="true"
+    android:scaleType="centerCrop"
+    >
+
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:gravity="center_horizontal"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:background="@drawable/ovar"
+            android:text="笔试\n报名"
+            android:textSize="@dimen/text_size12"
+            android:textColor="@color/text_color3"/>
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:src="@mipmap/home_png_vertical_default"/>
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/horizontal"
+        android:layout_width="25dp"
+        android:layout_height="80dp"
+        android:gravity="center_vertical"
+        android:src="@mipmap/home_png_transverse_default"/>
+
+
+
+</LinearLayout>

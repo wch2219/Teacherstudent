@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <include layout="@layout/toolbar_layout"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="描述您的问题或感受，获取更好的解答哦~"
+        android:textCursorDrawable="@null"
+        android:gravity="top"
+        android:background="@color/white"
+        android:textColor="@color/text_color9"
+        android:textSize="@dimen/text_size14"
+        android:padding="@dimen/margin_15"
+        android:id="@+id/question_content"/>
+    </LinearLayout>
+</LinearLayout>

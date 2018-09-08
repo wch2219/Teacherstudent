@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/swipe_target"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/normal_bg">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/normal_bg">
+<!--  app:layout_scrollFlags="scroll|enterAlways"-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                <include layout="@layout/toolbar_layout" />
+            <ImageView
+                android:id="@+id/book_cover"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:scaleType="fitXY"
+                android:background="@mipmap/home_png_activity_default"
+                 />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_15"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/book_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/text_size18" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/text_size12" />
+
+                        <TextView
+                            android:id="@+id/book_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/text_size22" />
+
+                        <TextView
+                            android:id="@+id/book_original_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_5"
+                            android:textColor="@color/text_color9"
+                            android:textSize="@dimen/text_size12" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/sell_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="1569人在学习"
+                        android:textColor="@color/text_color9"
+                        android:textSize="@dimen/text_size12" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tag_ly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/margin_15"
+                android:paddingRight="@dimen/margin_15"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/book_tag_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:scrollbars="none"
+                    android:visibility="gone"></android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/activity_ly"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/first_icon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp" />
+
+                        <TextView
+                            android:id="@+id/activity_first"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_5"
+                            android:gravity="center"
+                            android:text="新用户注册200优惠券"
+                            android:textColor="@color/text_color6"
+                            android:textSize="@dimen/text_size14" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/activity_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="5个活动"
+                            android:textColor="@color/text_color6"
+                            android:textSize="@dimen/text_size14" />
+
+                        <ToggleButton
+                            android:id="@+id/activity_switch"
+                            android:layout_width="20dp"
+                            android:layout_height="12dp"
+                            android:background="@android:color/transparent"
+                            android:drawableRight="@drawable/activity_open_close_selected"
+                            android:gravity="center|center_vertical"
+                            android:text=""
+                            android:textOff=""
+                            android:textOn="" />
+                    </LinearLayout>
+                </RelativeLayout>
+           <!-- <include layout="@layout/all_activity_include_layout" />-->
+            </LinearLayout>
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="?attr/colorPrimary"
+                app:tabIndicatorColor="@color/purple4"
+                app:tabIndicatorHeight="1.5dp"
+                app:tabSelectedTextColor="@color/purple4"
+                app:tabTextColor="@color/text_color3" />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </android.support.design.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <include layout="@layout/buy_bottom_layout" />
+    </LinearLayout>
+</RelativeLayout>

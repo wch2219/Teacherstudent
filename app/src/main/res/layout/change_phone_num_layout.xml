@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <include layout="@layout/toolbar_layout"/>
+
+
+    <EditText
+        android:layout_marginTop="30dp"
+        android:id="@+id/new_phone_num"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:drawablePadding="@dimen/margin_10"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@null"
+        android:inputType="phone"
+        android:textColor="@color/text_color3"
+        android:textColorHint="@color/text_color"
+        android:drawableLeft="@mipmap/login_icon_iphone"
+        android:hint="请输入手机号"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_color"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginRight="@dimen/dp_15"
+        android:gravity="center_vertical"
+        >
+        <EditText
+            android:id="@+id/identifying"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawablePadding="@dimen/dp_10"
+            android:background="@null"
+            android:textColor="@color/text_color3"
+            android:textColorHint="@color/text_color"
+            android:drawableLeft="@mipmap/login_icon_key"
+            android:hint="请输入验证码"/>
+        <TextView
+            android:id="@+id/code"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:text="获取验证码"
+            android:textColor="@color/purple4"
+            android:textSize="@dimen/sp_16"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_color"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"/>
+
+    <Button
+        android:id="@+id/complete"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:background="@drawable/button_gray"
+        android:text="完成"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"/>
+
+
+</LinearLayout>

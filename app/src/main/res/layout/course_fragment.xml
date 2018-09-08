@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/normal_bg">
+    <!--<android.support.v4.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:gravity="center">-->
+    <LinearLayout
+        android:id="@+id/screen_ly"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:button="@null"
+                android:drawablePadding="@dimen/margin_5"
+                android:drawableRight="@drawable/type_sort_img_selected"
+                android:gravity="center"
+                android:text="@string/type"
+                android:textColor="@drawable/screen_color_selected"
+                android:textSize="@dimen/text_size14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/sort"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:button="@null"
+                android:drawablePadding="@dimen/margin_5"
+                android:gravity="center"
+                android:text="销量"
+                android:textColor="@drawable/screen_color_selected" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:button="@null"
+                android:drawablePadding="@dimen/margin_5"
+                android:drawableRight="@drawable/price_img_selected"
+                android:gravity="center"
+                android:text="@string/price"
+                android:textColor="@drawable/screen_color_selected" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.jiaoshizige.teacherexam.utils.PullToRefreshLayoutRewrite xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pulltorefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:view_empty="@layout/layout_empty"
+        android:background="@color/normal_bg"
+        app:view_error="@layout/layout_error">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/course_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_10"></android.support.v7.widget.RecyclerView>
+    </com.jiaoshizige.teacherexam.utils.PullToRefreshLayoutRewrite>
+    <!--
+
+    </android.support.v4.widget.NestedScrollView>-->
+</LinearLayout>

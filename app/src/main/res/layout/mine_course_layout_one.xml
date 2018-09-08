@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/toolbar_layout"
+        android:id="@+id/tool"/>
+   <!-- <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">-->
+        <LinearLayout
+            android:layout_below="@+id/tool"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:orientation="vertical">
+          <com.jiaoshizige.teacherexam.utils.PullToRefreshLayoutRewrite
+              android:id="@+id/layout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="vertical">-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/course_list"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_height="wrap_content">
+                </android.support.v7.widget.RecyclerView>
+
+
+            <!--</LinearLayout>-->
+          </com.jiaoshizige.teacherexam.utils.PullToRefreshLayoutRewrite>
+
+        </LinearLayout>
+   <!-- </ScrollView>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:layout_marginRight="@dimen/margin_15"
+        android:id="@+id/add_class_ly"
+        android:visibility="visible"
+       android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:id="@+id/add_class"
+            android:textSize="@dimen/text_size14"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/purple_shape"
+            android:text="+添加课程"/>
+    </LinearLayout>
+</RelativeLayout>

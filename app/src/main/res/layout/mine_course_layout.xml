@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/toolbar_layout"/>
+   <!-- <com.zhongguan.zhongguan.widgets.ScrollviewNestedRecyclerview-->
+  <!--  <com.zhongguan.zhonggLogUtilstils.PullToRefreshLayoutRewrite
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">-->
+        <com.jiaoshizige.teacherexam.widgets.ScrollInterceptScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.wuxiaolong.pullloadmorerecyclerview.PullLoadMoreRecyclerView
+                    android:id="@+id/course_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginLeft="@dimen/dp_15">
+                </com.wuxiaolong.pullloadmorerecyclerview.PullLoadMoreRecyclerView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="@dimen/margin_30"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/margin_15"
+                    android:layout_marginRight="@dimen/margin_15"
+                    android:id="@+id/add_class_ly"
+                    android:visibility="visible"
+                    android:layout_marginBottom="50dp"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:id="@+id/add_class"
+                        android:textSize="@dimen/text_size14"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:background="@drawable/purple_shape"
+                        android:text="+添加班级"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.jiaoshizige.teacherexam.widgets.ScrollInterceptScrollView>
+<!--
+    </com.zhongguan.zhonggLogUtilstils.PullToRefreshLayoutRewrite>
+-->
+</LinearLayout>

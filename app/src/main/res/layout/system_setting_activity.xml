@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/mine_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:gravity="center_vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:gravity="center_vertical"
+                    android:text="@string/mine_feedback"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/text_size14" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/login_icon_jt" />
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dp"
+                android:background="@color/normal_bg"
+                android:visibility="visible" />
+
+
+            <RelativeLayout
+                android:id="@+id/my_recommend"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:gravity="center_vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:gravity="center_vertical"
+                    android:text="@string/mine_recommend"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/sp_14" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/login_icon_jt" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/normal_bg"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/about_us"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:gravity="center_vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:gravity="center_vertical"
+                    android:text="关于我们"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/sp_14" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/login_icon_jt" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+
+                android:id="@+id/choose"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="考试选择"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/examtype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableRight="@mipmap/login_icon_jt"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sp_14" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/normal_bg"
+                android:visibility="visible" />
+
+            <RelativeLayout
+
+                android:id="@+id/ticking"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:gravity="center_vertical"
+                    android:text="消息通知"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/sp_14" />
+
+                <ToggleButton
+                    android:id="@+id/message_switch"
+                    android:layout_width="53dp"
+                    android:layout_height="31dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:background="@android:color/transparent"
+                    android:checked="true"
+                    android:drawableRight="@drawable/toggal_open_close_selected"
+                    android:gravity="right"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="50dp"
+                android:background="@color/normal_bg" />
+
+            <RelativeLayout
+                android:id="@+id/updata"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="检查更新"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/vision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableRight="@mipmap/login_icon_jt"
+                    android:gravity="center_vertical"
+                    android:text="5.2.0"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/sp_14" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="50dp"
+                android:background="@color/normal_bg" />
+
+            <RelativeLayout
+                android:id="@+id/share_friends"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:gravity="center_vertical"
+                    android:text="仅WIFI下载"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/sp_14" />
+
+                <ToggleButton
+                    android:id="@+id/down_switch"
+                    android:layout_width="53dp"
+                    android:layout_height="31dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:background="@android:color/transparent"
+                    android:checked="true"
+                    android:drawableRight="@drawable/toggal_open_close_selected"
+                    android:gravity="right"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="50dp"
+                android:background="@color/normal_bg" />
+
+            <RelativeLayout
+                android:id="@+id/question_clear_cache"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="清除离线题库"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/question_Data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableRight="@mipmap/login_icon_jt"
+                    android:gravity="center_vertical"
+                    android:text="0 KB"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/sp_14" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="50dp"
+                android:background="@color/normal_bg" />
+
+            <RelativeLayout
+                android:id="@+id/clear_cache"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="清除缓存"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_Data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableRight="@mipmap/login_icon_jt"
+                    android:gravity="center_vertical"
+                    android:text="0 KB"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/sp_14" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:background="@color/normal_bg" />
+
+
+            <Button
+                android:id="@+id/exit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/normal3"
+                android:text="退出"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/sp_16" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:background="@color/normal_bg" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

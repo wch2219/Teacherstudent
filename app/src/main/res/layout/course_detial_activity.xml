@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <include layout="@layout/buy_bottom_layout"/>
+    </LinearLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/swipe_target"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="50dp">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/normal_bg"
+           >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <include layout="@layout/toolbar_layout" />
+                <!--  -->
+                <include layout="@layout/courses_detial_header" />
+            </LinearLayout>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                app:tabIndicatorColor="@color/purple4"
+                app:tabIndicatorHeight="1.5dp"
+                android:layout_marginTop="@dimen/dp_10"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:tabSelectedTextColor="@color/purple4"
+                app:tabTextColor="@color/text_color3" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:id="@+id/note_classify"
+                android:visibility="gone"
+                android:orientation="vertical"
+                >
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/normal_bg"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:id="@+id/note_icon"
+                        android:background="@mipmap/note_icon"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color6"
+                        android:textSize="@dimen/text_size14"
+                        android:text="我的笔记"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:id="@+id/classify_type"
+                        />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="left|center_vertical"
+                            android:id="@+id/classify_type_name"
+                            android:textColor="@color/text_color6"
+                            android:textSize="@dimen/text_size14"
+                            android:maxEms="14"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:text="全部课程"
+                            />
+                        <ToggleButton
+                            android:id="@+id/classify_switch"
+                            android:layout_width="20dp"
+                            android:layout_height="12dp"
+                            android:background="@android:color/transparent"
+                            android:gravity="center|center_vertical"
+                            android:text=""
+                            android:textOff=""
+                            android:textOn=""
+                            android:layout_marginRight="@dimen/margin_15"
+                            android:drawableRight="@drawable/activity_open_close_selected"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+          />
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="16dp"
+            app:backgroundTint="@color/transparent"
+            app:rippleColor="@color/transparent"
+            app:useCompatPadding="true"
+            android:id="@+id/float_action_btn"
+            android:src="@mipmap/home_png_askquestions_default"
+            app:layout_anchor="@id/viewpager"
+            android:visibility="gone"
+            app:layout_anchorGravity="bottom|right|end"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</RelativeLayout>

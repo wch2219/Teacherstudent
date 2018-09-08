@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <include layout="@layout/buy_bottom_layout" />
+    </LinearLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/swipe_target"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="50dp">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/normal_bg"
+                android:orientation="vertical"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <include layout="@layout/toolbar_layout" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/class_cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="211dp"
+                        android:scaleType="fitXY"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:padding="@dimen/margin_15">
+
+                        <ImageView
+                            android:id="@+id/back"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentStart="true"
+                            android:background="@mipmap/live_iocn_back_nor" />
+
+                        <ImageView
+                            android:id="@+id/share"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@mipmap/live_iocn_shareit_default" />
+                    </RelativeLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_15">
+
+                    <TextView
+                        android:id="@+id/class_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text="接口是兑换点啥的价格撒大声地"
+                        android:textColor="@color/text_color3"
+                        android:textSize="@dimen/text_size17" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/text_size14" />
+
+                            <TextView
+                                android:id="@+id/class_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="50.00"
+                                android:textColor="@color/red"
+                                android:textSize="28sp" />
+
+                            <TextView
+                                android:id="@+id/class_original_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_5"
+                                android:text="￥99.38"
+                                android:textColor="@color/text_color6"
+                                android:textSize="@dimen/text_size12" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/learn_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="1569人在学习"
+                            android:textColor="@color/text_color3"
+                            android:textSize="@dimen/text_size12" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_15">
+
+                        <TextView
+                            android:id="@+id/class_hour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="总课时：30" />
+
+                        <TextView
+                            android:id="@+id/give_book"
+                            android:layout_width="64dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@mipmap/give_book"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/normal_bg" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/activity_rl"
+                    android:orientation="vertical">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:gravity="center">
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:id="@+id/first_icon"
+                            />
+                        <TextView
+                            android:id="@+id/activity_first"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginLeft="@dimen/margin_5"
+                            android:text="新用户注册200优惠券"
+                            android:textColor="@color/text_color6"
+                            android:textSize="@dimen/text_size12" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/activity_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="5个活动"
+                            android:textColor="@color/text_color6"
+                            android:textSize="@dimen/text_size12" />
+
+                        <ToggleButton
+                            android:id="@+id/activity_switch"
+                            android:layout_width="20dp"
+                            android:layout_height="12dp"
+                            android:background="@android:color/transparent"
+                            android:gravity="center|center_vertical"
+                            android:text=""
+                            android:textOff=""
+                            android:textOn=""
+                            android:drawableRight="@drawable/activity_open_close_selected"/>
+                    </LinearLayout>
+                </RelativeLayout>
+                </LinearLayout>
+              <!--  <include layout="@layout/all_activity_include_layout" />-->
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:id="@+id/effective_ly"
+                android:orientation="vertical"
+                >
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/normal_bg" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:paddingLeft="@dimen/margin_15"
+                    android:paddingRight="@dimen/margin_15"
+                    android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical"
+                    android:text="班级有效期"
+                    android:textColor="@color/text_color6"
+                    android:textSize="@dimen/sp_14"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/effective"
+                    android:gravity="center_vertical|right"
+                    android:text="报班即学，有效期365天"
+                    android:textColor="@color/text_color6"
+                    android:textSize="@dimen/sp_14"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/normal_bg" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                app:tabIndicatorColor="@color/purple4"
+                app:tabIndicatorHeight="4dp"
+                app:tabSelectedTextColor="@color/purple4"
+                app:tabTextColor="@color/text_color3" />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="1dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>
+

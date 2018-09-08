@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="vertical"
+    android:background="#fff">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/leftbar_return"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/leftbar_return"/>
+        <TextView
+            android:id="@+id/tiltle_bar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="1111"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:id="@+id/login_icon_jt"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/login_icon_jt"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

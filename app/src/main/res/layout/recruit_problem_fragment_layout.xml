@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="17dp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        tools:ignore="WebViewLayout">
+
+        <TextView
+            android:id="@+id/now_qid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@color/text_color3"
+            android:textSize="19sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/all_qid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/15"
+            android:textColor="@color/text_color9"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(单选题)"
+            android:textColor="@color/submitbtn_color"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <WebView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:choiceMode="singleChoice"
+        android:divider="@null">
+
+    </ListView>
+</LinearLayout>

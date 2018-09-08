@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="17dp"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                tools:ignore="WebViewLayout">
+
+                <WebView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <com.jiaoshizige.teacherexam.utils.NoScrollListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:choiceMode="singleChoice"
+                android:divider="@null"
+                android:visibility="visible">
+
+            </com.jiaoshizige.teacherexam.utils.NoScrollListView>
+
+
+            <TextView
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:layout_marginTop="72dp"
+                android:background="@drawable/purple_shape_30"
+                android:gravity="center"
+                android:text="查看解析以及评分标准"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/subjective"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible"
+                tools:ignore="WebViewLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="50dp"
+                    android:text="参考答案"
+                    android:textColor="@color/submitbtn_color"
+                    android:textSize="14sp" />
+
+                <WebView
+                    android:id="@+id/answer_refer_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_10" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="50dp"
+                    android:text="评分标准"
+                    android:textColor="@color/submitbtn_color"
+                    android:textSize="14sp" />
+
+                <WebView
+                    android:id="@+id/pfbz_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_10" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="30dp"
+                    android:text="自我评分"
+                    android:textColor="@color/submitbtn_color"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:id="@+id/score_since"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/purple_shape_pingfen"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/score_since_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color3"
+                        android:textSize="13sp"
+                        android:layout_marginLeft="@dimen/sp_18"
+                        android:text="点击选择自我评分"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:drawableRight="@mipmap/icon_pulldown"
+                        android:layout_alignParentRight="true"/>
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/save_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="80dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/purple_shape_30"
+                    android:gravity="center"
+                    android:text="保存得分"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

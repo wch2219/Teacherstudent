@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/normal_bg" />
+
+    <com.jiaoshizige.teacherexam.utils.PullToRefreshLayoutRewrite xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pulltorefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:view_empty="@layout/layout_empty"
+        app:view_error="@layout/layout_error">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/class_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+    </com.jiaoshizige.teacherexam.utils.PullToRefreshLayoutRewrite>
+</LinearLayout>

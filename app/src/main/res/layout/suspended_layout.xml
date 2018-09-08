@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/name"
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/text_color3"
+        android:text="第一关:关卡名称"/>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="100dp"
+    android:textColor="@color/submitbtn_color"
+    android:textSize="@dimen/text_size16"
+    android:gravity="center"
+    android:text="暂停中..."/>
+<RelativeLayout
+    android:layout_marginTop="33dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+   <LinearLayout
+       android:id="@+id/continue_to"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:gravity="center">
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@mipmap/continue_icon"/>
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="@color/text_color3"
+           android:textSize="15dp"
+           android:layout_marginLeft="12dp"
+           android:text="继续闯关"/>
+   </LinearLayout>
+
+
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="38dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+      <LinearLayout
+          android:id="@+id/replay"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="center">
+          <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@mipmap/again_icon"/>
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="@color/text_color3"
+              android:textSize="15dp"
+              android:layout_marginLeft="12dp"
+              android:text="重新开始"/>
+      </LinearLayout>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="38dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+       <LinearLayout
+           android:id="@+id/exit"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:gravity="center">
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@mipmap/out_icon"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textColor="@color/text_color3"
+               android:textSize="15dp"
+               android:layout_marginLeft="12dp"
+               android:text="退出本关"/>
+       </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

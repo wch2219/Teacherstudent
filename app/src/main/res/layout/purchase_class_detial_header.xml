@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/purple4"
+    android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/white"
+        android:alpha="0.2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_15"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:layout_marginTop="50dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size14"
+                android:text="已完成" />
+
+            <TextView
+                android:id="@+id/completion_degree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:text="30" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size12"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:text="%" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/add_group"
+                android:layout_width="70dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size12"
+                android:background="@drawable/white_purple_shape"
+                android:text="@string/add_group" />
+        </LinearLayout>
+    </LinearLayout>
+    <me.zhouzhuo.zzhorizontalprogressbar.ZzHorizontalProgressBar
+        android:id="@+id/study_prodress"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        app:zpb_bg_color="#b9a3f4"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:layout_marginRight="@dimen/margin_15"
+        app:zpb_max="100"
+        app:zpb_padding="0dp"
+        app:zpb_pb_color="#e7dffa"
+        app:zpb_progress="30"
+        android:layout_marginTop="@dimen/margin_15"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_15"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:layout_marginRight="@dimen/margin_15"
+        android:gravity="center_vertical"
+        android:layout_marginTop="30dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size12"
+                android:text="@string/headmaster" />
+            <ImageView
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:id="@+id/headmaster_photo"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/headmaster_nickname"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size12"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:maxLines="1"
+                android:maxEms="6"
+                android:ellipsize="end"
+                android:text="卖火柴的灰太狼" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size12"
+                android:text="@string/assistant" />
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:id="@+id/assistant_photo"></android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </LinearLayout>
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/normal_bg"/>-->
+</LinearLayout>

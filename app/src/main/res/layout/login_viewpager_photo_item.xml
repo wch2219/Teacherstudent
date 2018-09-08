@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#fff"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/login_icon_iphone" />
+
+            <EditText
+                android:id="@+id/user_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:hint="请输入您的手机号"
+                android:phoneNumber="true"
+                android:singleLine="true"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/normal_bg"
+            android:layout_marginLeft="10dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/login_icon_password"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+
+                android:src="@mipmap/login_icon_password" />
+
+            <EditText
+                android:id="@+id/user_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/login_icon_password"
+                android:background="@null"
+                android:hint="请输入密码"
+                android:password="true"
+                android:singleLine="true"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/photo_code"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:text="获取验证码"
+                android:layout_marginRight="5dp"
+                android:gravity="center"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/normal_bg"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="40dp"
+            android:text="未注册的手机号将自动创建网校账号"
+            android:textColor="@color/text_color6"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/login_bt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_slecter"
+        android:text="立即登录"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击登录即表示接受"
+            android:textColor="@color/text_color3"/>
+        <TextView
+            android:id="@+id/web"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《服务协议》"
+            android:layout_toRightOf="@id/t"
+            android:textColor="@color/purple4"/>
+
+    </RelativeLayout>
+    
+    
+   <LinearLayout
+       android:layout_marginTop="30dp"
+       android:layout_width="match_parent"
+       android:layout_height="100dp"
+       android:orientation="horizontal">
+       <RelativeLayout
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="match_parent"
+           android:gravity="center_vertical"
+           android:layout_marginLeft="15dp">
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="0.5dp"
+               android:background="@color/normal_bg"/>
+       </RelativeLayout>
+       <RelativeLayout
+
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="match_parent"
+           android:gravity="center">
+
+           <ImageView
+               android:id="@+id/wx_login"
+               android:layout_width="100dp"
+               android:layout_height="146dp"
+               android:src="@mipmap/login_wx"/>
+
+
+       </RelativeLayout>
+       <RelativeLayout
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="match_parent"
+           android:gravity="center_vertical"
+          android:layout_marginRight="15dp">
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="0.5dp"
+               android:background="@color/normal_bg"/>
+       </RelativeLayout>
+
+   </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/child_child"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginRight="@dimen/margin_15"
+        android:layout_marginLeft="@dimen/margin_15">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical">
+        <com.jiaoshizige.teacherexam.widgets.PercentageBallView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/progress_ball"
+            android:layout_centerVertical="true"
+          />
+        <TextView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@mipmap/text"
+            android:id="@+id/content_type"/>
+            <TextView
+                android:id="@+id/content_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="1.学习前的准备"
+                android:textSize="@dimen/text_size14"
+                android:layout_marginLeft="@dimen/dp_10"
+                 />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+>
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/content_flag"
+               android:gravity="center"
+                android:background="@mipmap/down"
+                android:textColor="@color/purple4"
+                android:textSize="6sp"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

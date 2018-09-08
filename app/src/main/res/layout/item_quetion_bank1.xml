@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/normal_bg">
+    <LinearLayout
+        android:id="@+id/item"
+        android:layout_width="235dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="15dp"
+        android:background="@mipmap/card_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="62"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:text="小学综合素质"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/text_size16" />
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="31dp"
+                android:layout_height="14dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/purple_white_shape"
+                android:gravity="center"
+                android:text="小学"
+                android:textColor="@color/purple4"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="129"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableRight="@mipmap/jd_icon"
+                    android:text="闯关进度"
+                    android:textColor="@color/text_color9"
+                    android:textSize="@dimen/text_size14" />
+
+                <TextView
+                    android:id="@+id/to_confirm_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/purple4"
+                    android:textSize="@dimen/text_size12"
+                    android:layout_marginLeft="13dp"
+                    android:text="6"/>
+                <TextView
+                    android:id="@+id/all_to_confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color9"
+                    android:textSize="@dimen/text_size12"
+                    android:text="/49"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableRight="@mipmap/hg_icon"
+                    android:text="获得皇冠"
+                    android:textColor="@color/text_color9"
+                    android:textSize="@dimen/text_size14" />
+
+                <TextView
+                    android:id="@+id/crown_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/purple4"
+                    android:textSize="@dimen/text_size12"
+                    android:layout_marginLeft="13dp"
+                    android:text="6"/>
+                <TextView
+                    android:id="@+id/all_crown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color9"
+                    android:textSize="@dimen/text_size12"
+                    android:text="/49"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

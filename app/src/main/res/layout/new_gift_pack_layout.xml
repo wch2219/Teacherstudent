@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout"></include>
+
+    <RadioGroup
+        android:id="@+id/typerg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/normal_bg"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/guide1"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="0.5dp"
+            android:background="@drawable/choice_type_bg_select"
+            android:button="@null"
+            android:drawableRight="@drawable/choice_type_select"
+            android:paddingLeft="@dimen/margin_15"
+            android:paddingRight="@dimen/margin_15"
+            android:text="@string/guide" />
+
+        <RadioButton
+            android:id="@+id/guidance1"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="0.5dp"
+            android:background="@drawable/choice_type_bg_select"
+            android:button="@null"
+            android:drawableRight="@drawable/choice_type_select"
+            android:paddingLeft="@dimen/margin_15"
+            android:paddingRight="@dimen/margin_15"
+            android:text="@string/guidance" />
+
+        <RadioButton
+            android:id="@+id/psychology1"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="0.5dp"
+            android:background="@drawable/choice_type_bg_select"
+            android:button="@null"
+            android:drawableRight="@drawable/choice_type_select"
+            android:paddingLeft="@dimen/margin_15"
+            android:paddingRight="@dimen/margin_15"
+            android:text="@string/psychology" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/guide"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:gravity="center_vertical"
+                android:text="@string/guide"
+                android:textColor="@color/text_color6"
+                android:textSize="@dimen/sp_16" />
+
+            <RelativeLayout
+                android:id="@+id/submit_bt"
+                android:layout_width="60dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:background="@drawable/purple_shape"
+                    android:gravity="center"
+                    android:text="去测评"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size12" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/again"
+                android:layout_width="180dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:visibility="visible">
+                <TextView
+                    android:id="@+id/again_appraisal"
+                    android:layout_width="60dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:background="@drawable/purple"
+                    android:gravity="center"
+                    android:text="重新测评"
+                    android:textColor="@color/purple4"
+                    android:textSize="@dimen/text_size12" />
+                <TextView
+                    android:id="@+id/check"
+                    android:layout_width="84dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:background="@drawable/purple_shape"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true"
+                    android:text="查看测评报告"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size12" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/normal_bg" />
+
+        <TextView
+            android:id="@+id/guidance"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:text="@string/guidance"
+            android:textColor="@color/text_color9"
+            android:textSize="@dimen/sp_16" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/normal_bg" />
+
+        <TextView
+            android:id="@+id/psychology"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:text="@string/psychology"
+            android:textColor="@color/text_color9"
+            android:textSize="@dimen/sp_16" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/normal_bg" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit_bt1"
+        style="@style/submitButton"
+        android:background="@drawable/submitbutton_shape"
+        android:text="@string/start_exam"
+        android:visibility="gone" />
+</LinearLayout>

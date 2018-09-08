@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_15"
+        android:paddingRight="@dimen/margin_15"
+        android:paddingTop="@dimen/margin_15">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/other_photo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+               />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/other_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="路人甲0"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/text_size14" />
+
+                <TextView
+                    android:id="@+id/other_answer_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2019-10-59"
+                    android:textColor="@color/text_color9"
+                    android:textSize="@dimen/text_size11" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/other_answer_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="随便了写作业么"
+                android:layout_marginTop="@dimen/margin_20"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/text_size12" />
+
+            <LinearLayout
+                android:id="@+id/answer_pic"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="vertical"></LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/vioce_rt"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/text_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@drawable/purple_shape15"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/vioce_length"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/white" />
+
+            <View
+                android:id="@+id/bo_vioce"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="@dimen/margin_5"
+                android:background="@mipmap/home_iocn_play_default" />
+        </RelativeLayout>
+        <!--老师回复-->
+        <LinearLayout
+            android:id="@+id/teacher_reply_ly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:background="@drawable/teacher_reply_bg"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/margin_15"
+            android:paddingTop="@dimen/margin_10">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/reply_teacher_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="助教"
+                    android:textColor="@color/purple4"
+                    android:textSize="@dimen/text_size16" />
+
+                <ImageView
+                    android:id="@+id/reply_teacher_type"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="3dp"
+                    android:background="@mipmap/zhu" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/teacher_reply_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:text="老是回复内容，随便回复吧 是受打击了接口是的"
+                android:textSize="@dimen/text_size14" />
+
+            <TextView
+                android:id="@+id/teacher_reply_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:text="2018-10-12"
+                android:textColor="@color/text_color9"
+                android:textSize="@dimen/text_size12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:gravity="right|center_vertical">
+
+            <TextView
+                android:id="@+id/classmate_replay_num"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="查看6人回答"
+                android:textColor="@color/orange_color"
+                android:textSize="@dimen/text_size14" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/zan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_30"
+                    android:drawableLeft="@mipmap/zan"
+                    android:drawablePadding="@dimen/margin_5"
+                    android:gravity="bottom"
+                    android:text="3"
+                    android:textColor="@color/text_color6"
+                    android:textSize="@dimen/text_size12" />
+
+                <TextView
+                    android:id="@+id/reply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginRight="@dimen/margin_15"
+                    android:drawableLeft="@mipmap/reply"
+                    android:drawablePadding="@dimen/margin_5"
+                    android:gravity="center"
+                    android:text="回复"
+                    android:textColor="@color/text_color6"
+                    android:textSize="@dimen/text_size12" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/margin_15"
+            android:background="@color/normal_bg" />
+    </LinearLayout>
+</LinearLayout>

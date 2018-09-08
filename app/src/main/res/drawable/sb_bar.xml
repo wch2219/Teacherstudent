@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background"
+        >
+       &lt;!&ndash; <shape>
+            <gradient android:startColor="@color/red" android:width="10dp"
+                android:centerColor="@color/red" android:centerY="0.5" android:angle="90"
+                android:endColor="@color/red" />
+            <solid android:color="@color/red" />
+            <corners android:radius="20dp"/>
+            <stroke android:width="10dp" android:color="@color/normal_bg"
+               />
+        </shape>&ndash;&gt;
+        <shape>
+            <corners android:radius="5dp"/>
+            <solid android:color="@color/red"/>           &lt;!&ndash;  颜色&ndash;&gt;
+        </shape>
+
+    </item>
+    <item android:id="@android:id/secondaryProgress"
+       >
+        <clip>
+            <shape>
+                <gradient  android:width="5dp"/>
+                <solid android:color="@color/purple4" />
+            </shape>
+        </clip>
+    </item>
+    <item android:id="@android:id/progress"
+      >
+        <clip>
+            <shape>
+                <solid android:color="@color/purple4" />
+                <corners android:radius="20dp"/>
+                <stroke android:width="10dp" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>-->
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <solid android:color="#ff51495e" />
+        </shape>
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <solid android:color="#ff51495e" />
+            </shape>
+        </clip>
+    </item>
+    <item android:id="@*android:id/progress">
+        <clip>
+            <shape>
+                <solid android:color="#ff996dfe" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

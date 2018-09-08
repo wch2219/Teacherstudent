@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:scrollbars="none">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@color/white"
+          android:orientation="vertical">
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="46dp"
+              android:gravity="center_vertical">
+              <TextView
+                  android:id="@+id/register"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="立即注册"
+                  android:padding="@dimen/dp_10"
+                  android:layout_alignParentRight="true"
+                  android:layout_marginRight="20dp"
+                  android:textSize="18sp"
+                  android:visibility="gone"/>
+          </RelativeLayout>
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center">
+              <ImageView
+                  android:id="@+id/login_image"
+                  android:layout_width="80dp"
+                  android:layout_height="80dp"
+                  android:src="@mipmap/ic_launcher"
+                  />
+          </RelativeLayout>
+          <android.support.design.widget.TabLayout
+              android:id="@+id/tab_trends_title"
+              android:layout_width="match_parent"
+              android:background="@color/white"
+              android:layout_height="44dp"
+              android:layout_marginTop="46dp"
+              app:tabGravity="fill"
+              android:layout_gravity="center"
+              app:tabIndicatorHeight="1dp"
+              app:tabIndicatorColor="@color/submitbtn_color"
+              app:tabSelectedTextColor="@color/purple4"
+              app:tabTextAppearance="@style/MyTabLayoutTextAppearance" />
+
+          <android.support.v4.view.ViewPager
+              android:id="@+id/vp_trends"
+              android:layout_width="match_parent"
+              android:layout_height="260dp"
+              android:layout_marginLeft="@dimen/dp_15"
+              android:layout_marginRight="@dimen/dp_15"
+              android:layout_marginTop="@dimen/dp_15" />
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+              <LinearLayout
+                  android:layout_marginTop="25dp"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:gravity="center_vertical"
+                  android:layout_marginLeft="25dp"
+                  android:layout_marginRight="25dp">
+                  <View
+                      android:layout_width="0dp"
+                      android:layout_weight="1"
+                      android:layout_height="0.5dp"/>
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="社交账号登录"
+                      android:textSize="@dimen/text_size14"
+                      android:textColor="#808080"/>
+                  <View
+                      android:layout_width="0dp"
+                      android:layout_weight="1"
+                      android:layout_height="0.5dp"/>
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:layout_marginTop="26dp">
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:layout_weight="1"
+                      android:orientation="horizontal">
+
+                      <LinearLayout
+                          android:id="@+id/share_weibo"
+                          android:layout_width="0dp"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:orientation="vertical"
+                          android:visibility="gone">
+
+                          <RelativeLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="0dp"
+                              android:layout_weight="2"
+                              android:gravity="center">
+
+                              <ImageView
+                                  android:layout_width="50dp"
+                                  android:layout_height="50dp"
+                                  android:src="@mipmap/share_weibo" />
+                          </RelativeLayout>
+
+                          <RelativeLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="0dp"
+                              android:layout_marginTop="@dimen/margin_5"
+                              android:layout_weight="1"
+                              android:gravity="center_horizontal">
+
+                              <TextView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:text="@string/mine_Sina"
+                                  android:textColor="#7F7F7F"
+                                  android:textSize="12sp" />
+                          </RelativeLayout>
+
+
+                      </LinearLayout>
+
+                      <LinearLayout
+                          android:id="@+id/share_qq"
+                          android:layout_width="0dp"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:orientation="vertical"
+                          android:visibility="gone">
+
+                          <RelativeLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="0dp"
+                              android:layout_weight="2"
+                              android:gravity="center">
+
+                              <ImageView
+                                  android:layout_width="50dp"
+                                  android:layout_height="50dp"
+                                  android:src="@mipmap/share_qq"
+                                  android:layout_alignParentTop="true"
+                                  android:layout_centerHorizontal="true"
+                                  android:id="@+id/imageView" />
+                          </RelativeLayout>
+
+                          <RelativeLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="0dp"
+                              android:layout_weight="1"
+                              android:layout_marginTop="@dimen/margin_5"
+                              android:gravity="center_horizontal">
+
+                              <TextView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:text="@string/mine_QQ"
+                                  android:textColor="#7F7F7F"
+                                  android:textSize="12sp" />
+                          </RelativeLayout>
+
+
+                      </LinearLayout>
+
+                      <LinearLayout
+                          android:id="@+id/share_weixin"
+                          android:layout_width="0dp"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:orientation="vertical">
+
+                          <RelativeLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="0dp"
+                              android:layout_weight="2"
+                              android:gravity="center">
+
+                              <ImageView
+                                  android:layout_width="50dp"
+                                  android:layout_height="50dp"
+                                  android:src="@mipmap/share_weixin" />
+                          </RelativeLayout>
+
+                          <RelativeLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="0dp"
+                              android:layout_weight="1"
+                              android:layout_marginTop="@dimen/margin_10"
+                              android:gravity="center_horizontal">
+
+                              <TextView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:text="微信"
+                                  android:textColor="@color/text_color9"
+                                  android:textSize="12sp" />
+                          </RelativeLayout>
+
+
+                      </LinearLayout>
+
+                  </LinearLayout>
+
+              </LinearLayout>
+          </LinearLayout>
+      </LinearLayout>
+  </ScrollView>
+
+
+
+</RelativeLayout>

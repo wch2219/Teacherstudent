@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#77000000">
+    <RadioGroup
+        android:id="@+id/rg_videoType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rb_chao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:text="超清" />
+
+        <RadioButton
+            android:id="@+id/rb_gao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:text="高清" />
+
+        <RadioButton
+            android:id="@+id/rb_biao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:text="标清" />
+
+    </RadioGroup>
+</RelativeLayout>

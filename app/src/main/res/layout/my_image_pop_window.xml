@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="156dp"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <RelativeLayout
+            android:id="@+id/take_photo"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/text_color3"
+                android:text="拍照"/>
+
+        </RelativeLayout>
+       <!-- <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/normal_bg"/>-->
+        <RelativeLayout
+            android:id="@+id/choose"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/text_color3"
+                android:text="从手机相册选择"/>
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:background="#EEEEF0"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            >
+            <TextView
+                android:id="@+id/dismiss"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/text_color3"
+                android:text="取消"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

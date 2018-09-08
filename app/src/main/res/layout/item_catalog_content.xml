@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/course_item_ly"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:gravity="center_vertical">
+
+            <com.jiaoshizige.teacherexam.widgets.PercentageBallView
+                android:id="@+id/progress_ball"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:visibility="gone"
+                android:layout_marginLeft="15dp" />
+
+            <TextView
+                android:id="@+id/content_type"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:background="@mipmap/text"
+                android:gravity="center" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/margin_10"
+            >
+            <TextView
+                android:id="@+id/content_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="dssdsd"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/text_size14" />
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:textSize="10sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                />
+        </LinearLayout>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_downType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已下载"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/dp_10"
+            />
+        <!--<LinearLayout-->
+            <!--android:id="@+id/content_flag_ly"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="right|center">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/content_flag"-->
+                <!--android:layout_width="20dp"-->
+                <!--android:visibility="gone"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:layout_marginRight="@dimen/margin_15"-->
+                <!--android:background="@mipmap/down"-->
+                <!--android:gravity="center"-->
+                <!--android:textColor="@color/purple4"-->
+                <!--android:textSize="6sp" />-->
+        <!--</LinearLayout>-->
+    </LinearLayout>
+
+</LinearLayout>

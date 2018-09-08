@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <!--    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">-->
+
+    <com.jiaoshizige.teacherexam.utils.PullToRefreshLayoutRewrite
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:id="@+id/pulltorefresh"
+        app:view_empty="@layout/layout_empty"
+        app:view_error="@layout/layout_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:id="@+id/scroll"
+            >
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:id="@+id/course_no_data"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/nodata"
+                        android:layout_width="101dp"
+                        android:layout_height="92dp"
+                        android:background="@mipmap/nodata" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:textColor="@color/text_color9"
+                        android:textSize="@dimen/text_size12"
+                        android:text="暂无数据"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:id="@+id/course_error"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="101dp"
+                        android:layout_height="92dp"
+                        android:background="@mipmap/error" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:textColor="@color/text_color9"
+                        android:textSize="@dimen/text_size12"
+                        android:text="网络错误"/>
+                </LinearLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/homework_list"></android.support.v7.widget.RecyclerView>
+            </FrameLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </com.jiaoshizige.teacherexam.utils.PullToRefreshLayoutRewrite>
+    <!--  </FrameLayout>-->
+</LinearLayout>

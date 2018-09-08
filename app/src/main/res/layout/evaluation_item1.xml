@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+    <include layout="@layout/toolbar_layout"></include>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:visibility="gone"
+       android:orientation="vertical">
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/step_num"
+           android:gravity="center"
+           android:text="1/10"/>
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:id="@+id/step"/>
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/title"
+           android:text="1.选择看看怎么做题，请选择?"
+           />
+   </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <ListView
+                android:id="@+id/province"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:divider="@color/normal_bg"
+                android:dividerHeight="0.5dp"
+                android:scrollbars="none"
+                android:layout_gravity="center"/>
+            <ListView
+                android:id="@+id/city_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/normal_bg"
+                android:dividerHeight="0.5dp"
+                android:scrollbars="none"
+                android:background="@color/white"
+                android:layout_gravity="center"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/dialog"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:textSize="30dp"
+
+                android:layout_gravity="center"
+                android:visibility="invisible"
+                android:textColor="@color/purple4"
+                android:gravity="center"/>
+            <com.jiaoshizige.teacherexam.utils.SideBar
+                android:id="@+id/sidrbar"
+                android:layout_height="match_parent"
+                android:layout_width="30dp"
+                android:layout_gravity="right|center"/>
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

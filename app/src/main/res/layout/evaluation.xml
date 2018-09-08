@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/normal_bg"
+    android:scrollbars="none">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+<include layout="@layout/toolbar_layout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#fff"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/evaluation_Image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/lv" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="gteshgds"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <com.nex3z.flowlayout.FlowLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="@dimen/margin_15"
+                android:id="@+id/flow_layout"
+                app:childSpacing="6dp"
+                app:rowSpacing="8dp"
+                flow = "true"
+                ></com.nex3z.flowlayout.FlowLayout>
+            <!--自定义属性-->
+            <!--
+                flow = "true"  流式布局
+                childSpacing：子控件之间的距离  "auto"
+                rowSpacing:行间距
+                childSpacingForLastRow：子控件最后一行的间距
+                rtl = "true" 一行从右往左一次排列
+            -->
+
+
+           <!-- <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+               >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/yellow"
+                        android:gravity="center"
+                        android:text="河南"
+                        android:textColor="@color/yellow" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/yellow"
+                        android:gravity="center"
+                        android:text="中学"
+                        android:textColor="@color/yellow" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/yellow"
+                        android:gravity="center"
+                        android:text="师范生"
+                        android:textColor="@color/yellow" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/yellow"
+                        android:gravity="center"
+                        android:text="本科"
+                        android:textColor="@color/yellow" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="110dp"
+                            android:layout_height="45dp"
+                            android:background="@drawable/yellow"
+                            android:gravity="center"
+                            android:text="面试一年2次"
+                            android:textColor="@color/yellow" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="110dp"
+                            android:layout_height="45dp"
+                            android:background="@drawable/yellow"
+                            android:gravity="center"
+                            android:text="笔试一年2次"
+                            android:textColor="@color/yellow" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/yellow"
+                        android:gravity="center"
+                        android:text="河南"
+                        android:textColor="@color/yellow" />
+                </RelativeLayout>
+
+
+            </LinearLayout>-->
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#fff"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@mipmap/btn_qr" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="10"
+                android:text="131354135145313"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#fff"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@mipmap/btn_qr" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="10"
+                android:text="131354135145313"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#fff"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@mipmap/btn_qr" />
+
+                <ImageView
+                    android:id="@+id/right_one"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/icon_option_normal" />
+
+                <ImageView
+                    android:id="@+id/right_two"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/right_one"
+                    android:src="@mipmap/icon_option_normal" />
+
+                <ImageView
+                    android:id="@+id/right_three"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/right_two"
+                    android:src="@mipmap/icon_option_normal" />
+
+
+            </RelativeLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:gravity="center">
+             <!--  <LinearLayout
+                   android:layout_marginTop="5dp"
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:layout_height="match_parent"
+                   android:background="#fff"
+                   android:orientation="vertical"
+                   android:gravity="center">
+                   <com.zhongguan.zhongguan.until.PieChatView
+                       android:id="@+id/pieChatView_one"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent" />
+
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_marginTop="5dp"
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:layout_height="match_parent"
+                   android:background="#fff"
+                   android:orientation="vertical"
+                   android:gravity="center">
+                   <com.zhongguan.zhongguan.until.PieChatView
+                       android:id="@+id/pieChatView_two"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent" />
+
+               </LinearLayout>
+-->
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="44dp"
+                   android:layout_marginLeft="15dp"
+                   android:layout_marginRight="15dp"
+                   android:orientation="horizontal">
+                   <RelativeLayout
+                       android:layout_width="0dp"
+                       android:layout_weight="1"
+                       android:layout_height="match_parent"
+                       android:gravity="center">
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="0.5dp"
+                           android:background="@color/normal_bg"/>
+                   </RelativeLayout>
+                   <RelativeLayout
+                       android:layout_width="0dp"
+                       android:layout_weight="1"
+                       android:layout_height="match_parent"
+                       android:gravity="center">
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="44dp"
+                           android:gravity="center"
+                           android:text="同壕战友" />
+                   </RelativeLayout>
+                   <RelativeLayout
+                       android:layout_width="0dp"
+                       android:layout_weight="1"
+                       android:layout_height="match_parent"
+                       android:gravity="center">
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="0.5dp"
+                           android:background="@color/normal_bg"/>
+                   </RelativeLayout>
+
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="320dp"
+                   android:layout_marginLeft="15dp"
+                   android:layout_marginRight="15dp"
+                   android:orientation="horizontal">
+
+                   <RelativeLayout
+                       android:layout_width="0dp"
+                       android:layout_height="match_parent"
+                       android:layout_weight="3"
+                       android:gravity="center">
+
+                       <com.jiaoshizige.teacherexam.widgets.ShanXinView
+                           android:id="@+id/trench_view"
+                           android:layout_width="300dp"
+                           android:layout_height="300dp"
+                           android:layout_marginLeft="15dp" />
+                   </RelativeLayout>
+
+                   <LinearLayout
+                       android:layout_width="0dp"
+                       android:layout_height="match_parent"
+                       android:layout_weight="1"
+                       android:orientation="vertical"
+                       android:gravity="top">
+
+                       <TextView
+                           android:layout_marginTop="5dp"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="幼儿"
+                           android:gravity="center"
+                           android:textSize="16sp"
+                           android:drawablePadding="5dp"
+                           android:drawableLeft="@mipmap/icon_collect"/>
+                       <TextView
+                           android:layout_marginTop="5dp"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="小学"
+                           android:gravity="center"
+                           android:textSize="16sp"
+                           android:drawablePadding="5dp"
+                           android:drawableLeft="@mipmap/icon_collect"/>
+                       <TextView
+                           android:layout_marginTop="5dp"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="初中"
+                           android:gravity="center"
+                           android:textSize="16sp"
+                           android:drawablePadding="5dp"
+                           android:drawableLeft="@mipmap/icon_collect"/>
+                       <TextView
+                           android:layout_marginTop="5dp"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="高中"
+                           android:gravity="center"
+                           android:textSize="16sp"
+                           android:drawablePadding="5dp"
+                           android:drawableLeft="@mipmap/icon_collect"/>
+                   </LinearLayout>
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="44dp"
+                   android:layout_marginLeft="15dp"
+                   android:layout_marginRight="15dp"
+                   android:orientation="horizontal">
+                   <RelativeLayout
+                       android:layout_width="0dp"
+                       android:layout_weight="1"
+                       android:layout_height="match_parent"
+                       android:gravity="center">
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="0.5dp"
+                           android:background="@color/normal_bg"/>
+                   </RelativeLayout>
+                   <RelativeLayout
+                       android:layout_width="0dp"
+                       android:layout_weight="1"
+                       android:layout_height="match_parent"
+                       android:gravity="center">
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="44dp"
+                           android:gravity="center"
+                           android:text="同城战友" />
+                   </RelativeLayout>
+                   <RelativeLayout
+                       android:layout_width="0dp"
+                       android:layout_weight="1"
+                       android:layout_height="match_parent"
+                       android:gravity="center">
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="0.5dp"
+                           android:background="@color/normal_bg"/>
+                   </RelativeLayout>
+
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="320dp"
+                   android:layout_marginLeft="15dp"
+                   android:layout_marginRight="15dp"
+                   android:orientation="horizontal">
+
+                   <RelativeLayout
+                       android:layout_width="0dp"
+                       android:layout_height="match_parent"
+                       android:layout_weight="3"
+                       android:gravity="center">
+
+                       <com.jiaoshizige.teacherexam.widgets.ShanXinView
+                           android:id="@+id/city"
+                           android:layout_width="300dp"
+                           android:layout_height="300dp"
+                           android:layout_marginLeft="15dp" />
+                   </RelativeLayout>
+
+                   <LinearLayout
+                       android:layout_width="0dp"
+                       android:layout_height="match_parent"
+                       android:layout_weight="1"
+                       android:orientation="vertical"
+                       android:gravity="top">
+
+                       <TextView
+                           android:layout_marginTop="5dp"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="北京"
+                           android:gravity="center"
+                           android:textSize="16sp"
+                           android:drawablePadding="5dp"
+                           android:drawableLeft="@mipmap/icon_collect"/>
+                       <TextView
+                           android:layout_marginTop="5dp"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="上海"
+                           android:gravity="center"
+                           android:textSize="16sp"
+                           android:drawablePadding="5dp"
+                           android:drawableLeft="@mipmap/icon_collect"/>
+                       <TextView
+                           android:layout_marginTop="5dp"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="河南"
+                           android:gravity="center"
+                           android:textSize="16sp"
+                           android:drawablePadding="5dp"
+                           android:drawableLeft="@mipmap/icon_collect"/>
+                       <TextView
+                           android:layout_marginTop="5dp"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="其他"
+                           android:gravity="center"
+                           android:textSize="16sp"
+                           android:drawablePadding="5dp"
+                           android:drawableLeft="@mipmap/icon_collect"/>
+                   </LinearLayout>
+               </LinearLayout>
+
+           </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ceping_name"
+                android:textSize="18sp"/>
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/purple_shape"
+                android:text="学习指数测评预约"
+                android:textColor="#fff"
+                android:textSize="18sp"/>
+
+
+
+            <TextView
+                android:background="#fff"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ceping_name"
+                android:textColor="@color/text_color6"
+                android:textSize="18sp"
+                android:layout_marginBottom="20dp"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+
+
+
+</ScrollView>

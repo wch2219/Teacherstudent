@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/pop_classmate_reply_ly"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical">
+        <EditText
+            android:id="@+id/pop_ed_input_content"
+            android:layout_width="0dp"
+            android:layout_height="33dp"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:layout_weight="1"
+            android:background="@color/normal_bg"
+            android:drawableLeft="@mipmap/reply_left"
+            android:paddingLeft="10dp" />
+        <Button
+            android:id="@+id/pop_btn_send_replay"
+            android:layout_width="56dp"
+            android:layout_height="33dp"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:layout_marginRight="@dimen/margin_15"
+            android:background="@drawable/purple_shape"
+            android:text="发送"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size14" />
+    </LinearLayout>
+</LinearLayout>

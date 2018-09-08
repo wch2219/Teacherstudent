@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:background="@mipmap/shunlitongguan_png_bg"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/tool_item"
+            layout="@layout/toolbar_layout" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:src="@mipmap/img_victory" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/start1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/shunlitongguani_png_crow_middle" />
+
+            <ImageView
+                android:id="@+id/start2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:src="@mipmap/shunlitongguani_png_crow_middle" />
+
+            <ImageView
+                android:id="@+id/start3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:src="@mipmap/shunlitongguani_png_crow_middle" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="@dimen/margin_30"
+            android:background="@mipmap/chuangguanshibai_png_banner"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:text="共15道题,答对10道,答错5道"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/share"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:background="@drawable/purple_write_shape_30"
+                android:gravity="center"
+                android:text="炫耀一下"
+                android:textColor="@color/submitbtn_color"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/check"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:background="@drawable/yellow_write_shape_30"
+                android:gravity="center"
+                android:text="查看解析"
+                android:textColor="@color/yellow1"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/normal4" />
+
+        <TextView
+            android:id="@+id/repaly"
+            android:paddingRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:text="重玩本关"
+            android:textColor="@color/submitbtn_color"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/next"
+            android:paddingLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:text="下一关"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_20"
+            android:textColor="@color/submitbtn_color"
+            android:textSize="15sp" />
+    </RelativeLayout>
+</RelativeLayout>

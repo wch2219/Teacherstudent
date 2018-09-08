@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RadioButton
+        android:id="@+id/pop_radiobutton"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:button="@null"
+        android:drawableRight="@drawable/popup_selected"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="ssss"
+        android:focusable="false"
+        android:textColor="@color/text_color3"
+        android:textSize="@dimen/text_size14" />
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/normal_bg">
+    <include layout="@layout/toolbar_layout"/>
+    <EditText
+        android:id="@+id/suggest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white"
+        android:gravity="left|top"
+        android:paddingLeft="@dimen/dp_15"
+        android:hint="@string/true_order_tip"
+        android:paddingTop="@dimen/dp_15"
+        android:textColor="@color/text_color3"
+        android:textColorHint="@color/text_color9"
+        android:textSize="@dimen/sp_14"
+        android:lines="6"/>
+<EditText
+    android:id="@+id/phone"
+    android:layout_marginTop="@dimen/dp_10"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:hint="@string/contact_way"
+    android:inputType="phone"
+    android:textSize="@dimen/sp_14"
+    android:textColor="@color/text_color3"
+    android:textColorHint="@color/text_color9"
+    android:paddingLeft="@dimen/dp_15"/>
+    <Button
+        android:id="@+id/commit"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="提交"
+        android:gravity="center"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:background="@drawable/purple_shape"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/white"/>
+</LinearLayout>

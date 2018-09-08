@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="37dp"
+        android:layout_marginRight="37dp"
+        android:background="@drawable/purple_shape"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/home_bg_signin_default"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:paddingRight="@dimen/padding_15"
+                android:gravity="right|center_vertical"
+                android:id="@+id/close_sign">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@mipmap/home_icon_pop_default" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@mipmap/my_png_avatar_default" />
+
+            <TextView
+                android:id="@+id/total_coin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_30"
+                android:layout_marginTop="@dimen/margin_15"
+                android:text="我的教师币 20"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size18" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bottom_shape5"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="每天签到送教师币"
+            android:textColor="@color/text_color6"
+            android:textSize="@dimen/text_size16" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="签到规则"
+                android:textColor="@color/text_color9"
+                android:id="@+id/sing_rules"
+                android:textSize="10sp" />
+
+            <com.jiaoshizige.teacherexam.widgets.HorizontalListView
+                android:id="@+id/sign_date"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginTop="26dp"
+                android:scrollbars="none"></com.jiaoshizige.teacherexam.widgets.HorizontalListView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/normal_bg" />
+
+                <TextView
+                    android:id="@+id/signed_days"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="@color/text_color9"
+                    android:textSize="@dimen/text_size12" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/normal_bg" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/remain_days"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginBottom="26dp"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_15"
+                android:background="@drawable/gray_shap_5"
+                android:gravity="center"
+                android:text="连续签到参与抽奖"
+                android:textColor="#B4B4B4"
+                android:textSize="@dimen/text_size16" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

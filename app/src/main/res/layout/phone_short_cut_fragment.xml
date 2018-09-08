@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <com.jiaoshizige.teacherexam.widgets.ClearEditText
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="@dimen/margin_30"
+        android:layout_marginRight="@dimen/margin_30"
+        android:background="@null"
+        android:textSize="@dimen/text_size14"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/text_color3"
+        android:textColorHint="@color/text_color"
+        android:drawableLeft="@mipmap/login_icon_iphone"
+        android:drawablePadding="@dimen/dp_16"
+        android:hint="请输入手机号" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/margin_30"
+        android:layout_marginRight="@dimen/margin_30"
+        android:background="@color/normal_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="@dimen/margin_30"
+        android:layout_marginRight="@dimen/margin_30"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@mipmap/login_icon_key"
+            android:hint="请输入验证码"
+            android:textSize="@dimen/text_size14"
+            android:inputType="number"
+            android:drawablePadding="@dimen/dp_16"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/text_color3"
+            android:textColorHint="@color/text_color"
+            android:background="@null">
+        </EditText>
+
+        <TextView
+            android:id="@+id/identifying_code"
+            android:layout_width="wrap_content"
+            android:paddingLeft="@dimen/margin_20"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size14"
+            android:textColor="@color/purple4"
+            android:text="获取验证码" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/margin_30"
+        android:layout_marginRight="@dimen/margin_30"
+        android:background="@color/normal_bg" />
+    <TextView
+        android:id="@+id/text"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="未注册的手机号将自动创建网校账号"
+        android:textColor="@color/text_color9"
+        android:textSize="@dimen/text_size12"/>
+
+    <Button
+        android:id="@+id/login_bt"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_gray"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size14" />
+
+    <TextView
+        android:layout_marginTop="@dimen/margin_5"
+        android:id="@+id/service_deal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/text_color9"
+        android:text="@string/service_deal"
+        android:gravity="center"
+        android:visibility="gone"/>
+</LinearLayout>

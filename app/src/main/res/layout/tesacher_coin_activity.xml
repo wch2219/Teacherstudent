@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:text="@string/account_balance"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/coin"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:drawablePadding="10dp"
+            android:drawableRight="@mipmap/live_iocn_currency_nor"
+            android:gravity="center_vertical"
+            android:text="0"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/sp_18" />
+    </RelativeLayout>
+
+    <ListView
+        android:layout_marginTop="@dimen/dp_15"
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+    </ListView>
+
+
+    <!--支付-->
+    <RelativeLayout
+        android:id="@+id/btn_layout_alipay"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_marginTop="@dimen/dp_15"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:text="@string/zhifubao"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/sp_16" />
+
+
+       <RelativeLayout
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:layout_alignParentRight="true"
+           android:gravity="center_vertical"
+           android:layout_marginRight="@dimen/dp_15">
+           <CheckBox
+               android:id="@+id/alipay"
+               android:layout_width="23dp"
+               android:layout_height="23dp"
+               android:background="@drawable/checkbox"
+               android:checked="true"
+               android:button="@null"/>
+
+       </RelativeLayout>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/normal_bg"
+        android:layout_marginLeft="@dimen/dp_15"/>
+    <RelativeLayout
+        android:id="@+id/btn_layout_weixin_pay"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:text="@string/weixin"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/sp_16" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:layout_marginRight="@dimen/dp_15">
+            <CheckBox
+                android:id="@+id/weixin"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:background="@drawable/checkbox"
+                android:button="@null"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <Button
+        android:id="@+id/change_phone_num"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="充值"
+        android:gravity="center"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:background="@drawable/purple_shape"
+        android:textSize="@dimen/sp_18"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/record"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/text_color9"
+        android:textSize="@dimen/sp_16"
+        android:text="查看充值记录"/>
+
+</LinearLayout>

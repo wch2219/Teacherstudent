@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/normal_bg">
+    <RelativeLayout
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/tv_item"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:gravity="center_vertical"
+            android:text="@string/child"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/sp_16"
+            />
+       <RelativeLayout
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:gravity="center_vertical">
+           <RadioButton
+               android:id="@+id/rb_item"
+               android:layout_width="20dp"
+               android:layout_height="20dp"
+               android:gravity="center_vertical"
+               android:layout_marginRight="@dimen/dp_15"
+               android:layout_alignParentRight="true"
+               android:clickable="false"
+               android:focusable="false"
+               android:focusableInTouchMode="false"
+               android:button="@null"
+               android:background="@drawable/choice_type_select"/>
+       </RelativeLayout>
+
+
+    </RelativeLayout>
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="0.5dp"
+    android:background="@color/normal1"/>
+
+
+
+
+
+    <!-- <include layout="@layout/toolbar_layout"></include>-->
+   <!-- <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/typerg"
+        android:orientation="vertical">-->
+       <!-- <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:id="@+id/child"
+            android:paddingLeft="@dimen/margin_15"
+            android:paddingRight="@dimen/margin_15"
+            android:drawableRight="@drawable/choice_type_select"
+            android:background="@drawable/choice_type_bg_select"
+            android:text="@string/child"/>-->
+      <!--  <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:id="@+id/primary_sc"
+            android:paddingLeft="@dimen/margin_15"
+            android:paddingRight="@dimen/margin_15"
+            android:drawableRight="@drawable/choice_type_select"
+            android:background="@drawable/choice_type_bg_select"
+            android:text="@string/primary_sc"/>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:id="@+id/junior_middle_sc"
+            android:paddingLeft="@dimen/margin_15"
+            android:paddingRight="@dimen/margin_15"
+            android:drawableRight="@drawable/choice_type_select"
+            android:background="@drawable/choice_type_bg_select"
+            android:text="@string/junior_middle_sc"/>-->
+  <!--  </RadioGroup>-->
+</LinearLayout>

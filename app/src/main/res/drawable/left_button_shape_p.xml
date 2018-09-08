@@ -1,0 +1,20 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- This is the main color -->
+    <item
+        android:right="-2dp"
+        >
+        <shape>
+            <!--    边框颜色 -->
+
+            <solid android:color="@color/purple4"/>
+            <solid android:color="@color/purple4" />
+            <stroke
+                android:width="0.5dp"
+                android:color="@color/purple4"/>
+            <corners
+                android:topLeftRadius="5dp"
+                android:bottomLeftRadius="5dp"/>
+        </shape>
+    </item>
+
+</layer-list>

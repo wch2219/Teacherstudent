@@ -1,0 +1,130 @@
+<resources>
+    <string name="app_name">教师资格证</string>
+    <string name="pre">上一题</string>
+    <string name="next">下一题</string>
+    <string name="child">幼儿</string>
+    <string name="primary_sc">小学</string>
+    <string name="junior_middle_sc">初中</string>
+    <string name="high_sc">高中</string>
+    <string name="examtype">考试类型</string>
+    <string name="examair">考试地区</string>
+    <string name="pleaseselect">请选择</string>
+    <string name="sure">确定</string>
+    <string name="start_exam">开始测评</string>
+    <string name="guide">学前向导测评</string>
+    <string name="guidance">学前指导测评 (暂未开放)</string>
+    <string name="psychology">学前心理测评 (暂未开放)</string>
+    <string name="assistant">助教：</string>
+    <string name="headmaster">班主任：</string>
+    <string name="add_group">加入班级群</string>
+    <string name="total_evaluate">总体评价</string>
+    <string name="sure_answer">确认答案</string>
+    <string name="reply">回复</string>
+    <string name="give_zan">点赞</string>
+    <string name="classes">班级</string>
+    <string name="course">课程</string>
+    <string name="book">图书</string>
+    <string name="type">类型</string>
+    <string name="sort">排序</string>
+    <string name="price">价格</string>
+    <string name="add_buy">加入购买</string>
+    <string name="consultation">咨询</string>
+    <string name="collection">收藏</string>
+    <string name="cancel">取消</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ceping_name">您的测评报告已经生成，恭喜您已经成为中冠会员,领专属会员编号，享0元畅听中冠会员微课堂，
+        请加QQ群:4601717778
+    </string>
+    <string name="ceping_content">学习指数测评是对您教师资格证学习程度的一个检验，分考点，分模块，多层次，
+    专业解读您的学习痛点</string>
+    <string name="mine">我的</string>
+    <string name="mine_study">坚持学习</string>
+    <string name="mine_complete">完成任务</string>
+    <string name="mine_collect">我的收藏</string>
+    <string name="mine_interest">我的兴趣</string>
+    <string name="mine_appraisal">我的测评</string>
+    <string name="mine_course">我的课程</string>
+    <string name="mine_open_class">我的公开课</string>
+    <string name="mine_feedback">意见反馈</string>
+    <string name="mine_recommend">向好友推荐</string>
+    <string name="about_us">关于我们</string>
+    <string name="mine_course_ware">已下载的课件管理</string>
+    <string name="mine_num">0.00M</string>
+    <string name="mine_teacher_money">我的教师币</string>
+    <string name="mine_teacher_money_num">余额：0</string>
+    <string name="mine_coupon">我的卡券</string>
+    <string name="mine_indent">我的订单</string>
+    <string name="mine_site">我的收货地址</string>
+    <string name="mine_score">获得学分</string>
+    <string name="mine_set">系统设置</string>
+    <string name="mine_account">账号与安全</string>
+    <string name="mine_QQ">QQ账号</string>
+    <string name="mine_WeiXin">微信账号</string>
+    <string name="mine_Sina">新浪微博账号</string>
+    <string name="mine_status">未绑定</string>
+    <string name="phone_num">登录手机号码</string>
+    <string name="phone">请输入手机号码</string>
+    <string name="update_password">修改密码</string>
+    <string name="true_order_tip">请写下您的意见或者反馈，我们会认真听取</string>
+    <string name="contact_way">请输入您的联系方式</string>
+    <string name="ewm">扫描二维码，下载中冠网校APP</string>
+    <string name="invitation_code">分享邀请码，下载中冠网校APP</string>
+    <string name="yours_invitation_code">您的邀请码：</string>
+    <string name="account_balance">账户余额:</string>
+    <string name="_10">10</string>
+    <string name="_30">30</string>
+    <string name="_60">60</string>
+    <string name="_180">180</string>
+    <string name="zhifubao">支付宝支付</string>
+    <string name="weixin">微信支付</string>
+    <string name="useful_life">有效期至2017-7-7</string>
+    <string name="useful">立即使用</string>
+    <string name="coupons_name">课程名称</string>
+    <string name="coupons_claim">课程订单满100减10元</string>
+    <string name="course_name">课程一：小学综合素质小学综合素质</string>
+    <string name="course_people_num">156人在学习</string>
+    <string name="books_people_buy">156人已购买</string>
+    <string name="new_gift_bag">新人大礼包</string>
+    <string name="look_over">点击查看</string>
+    <string name="service_deal">点击注册即表示接受《服务协议》</string>
+    <string name="str_recorder_normal">按住说话</string>
+    <string name="str_recorder_recording">松开结束</string>
+    <string name="str_recorder_want_cancel">松开手指，取消发送</string>
+    <string name="NetworkCannotConnect">网络连接错误 请检查您的网络设置或稍后重试</string>
+    <string name="binding">绑定手机号，获取最新考试提醒</string>
+    <string name="about_us_content">\t中冠网校APP是中冠教育打造的在线学习一站式服务平台，学员可以通过在线课堂、考试题库、图书试卷，在线直播等模块，通过作业、问答的形式更能 即时分享知识、收获学习良伴。丰富的课程体系、权威的课程教学、先进的独创课件、专业的课程答疑。教育、学习、管理相结合让你随时随地轻松学， 是你学习考试的通关利器！</string>
+    <!--第三方配置 start-->
+    <!--QQ-->
+    <!--tencent1106290082-->
+    <string name="qq_app_id">1104843673</string>
+    <string name="qq_app_key">WogvwOQx2YumHWWP</string>
+    <string name="qq_app_scheme">tencent1104843673</string>
+    <!--友盟-->
+    <string name="umeng_app_key">56248333e0f55a3539002f99</string>
+    <!--新浪-->
+    <string name="sina_app_key">2379091784</string>
+    <string name="sina_app_secret">6ba081de0efec7cf4a32e78163d8672f</string>
+    <!--<string name="weichat_app_id">wxe04193248323a21c</string>-->
+    <!--<string name="weichat_app_secret">c039ad0444c8d441aac0e94a1b7700ac</string>-->
+    <!--微信-->
+    <string name="weichat_app_id">wx71d5e2d2684f8385</string>
+    <string name="weichat_app_secret">3bb4f87380f8b48e63172bf13288affe</string>
+    <!--<string name="umeng_message_secret">9c5c3000e68b9b59a9352d9bb1618818</string>-->
+    <!---->
+    <!---->
+    <!--第三方配置 end-->
+
+    <!--第三方配置 start-->
+    <!--QQ-->
+    <!--tencent1106290082-->
+    <!--<string name="qq_app_id">1106290082</string>-->
+    <!--<string name="qq_app_key">XARASBM5OZIFplFU</string>-->
+    <!--<string name="qq_app_scheme">tencent1106290082</string>-->
+    <!--友盟-->
+    <!--<string name="umeng_app_key">5a41fe248f4a9d707000000c</string>-->
+    <!---->
+    <!--第三方配置 end-->
+</resources>

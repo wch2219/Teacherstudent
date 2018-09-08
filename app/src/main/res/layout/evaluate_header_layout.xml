@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/normal_bg"
+    android:id="@+id/item_header"
+   >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/margin_10"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/margin_15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size16"
+                android:textColor="@color/text_color3"
+                android:text="@string/total_evaluate" />
+
+            <RatingBar
+                android:id="@+id/toatal_ratingbar"
+                style="@style/roomRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="14dp"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="3"
+                android:stepSize="0.5" />
+
+            <TextView
+                android:id="@+id/total_evaluate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:text="5.0"
+                android:textColor="@color/orange_color"
+                android:textSize="@dimen/text_size16" />
+        </LinearLayout>
+
+        <com.nex3z.flowlayout.FlowLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+       android:padding="@dimen/margin_15"
+        android:id="@+id/flow_layout"
+        app:childSpacing="10dp"
+        app:rowSpacing="10dp"
+        flow = "true"
+        ></com.nex3z.flowlayout.FlowLayout>
+    </LinearLayout>
+
+
+    <!--
+           flow = "true"  流式布局
+           childSpacing：子控件之间的距离  "auto"
+           rowSpacing:行间距
+           childSpacingForLastRow：子控件最后一行的间距
+           rtl = "true" 一行从右往左一次排
+       -->
+</LinearLayout>

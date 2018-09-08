@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/normal_bg"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:padding="@dimen/margin_15">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/home_icon_ask_default" />
+
+            <TextView
+                android:id="@+id/question_subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="都是开到合适的话伤筋动骨让对方的经适房" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="right|center_vertical"
+            android:paddingBottom="@dimen/margin_15"
+            android:paddingRight="@dimen/margin_15">
+
+            <ImageView
+                android:id="@+id/question_photo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="sd**"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/text_size14" />
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2017-10-89 16.63"
+                    android:textColor="@color/text_color9"
+                    android:textSize="@dimen/text_size11" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/sort_ly"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@color/white"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/margin_15"
+                android:paddingRight="@dimen/margin_15">
+
+                <TextView
+                    android:id="@+id/answer_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@mipmap/home_icon_answer_default"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:gravity="center"
+                    android:text="6人回答"
+                    android:textColor="@color/text_color6"
+                    android:textSize="@dimen/text_size14" />
+
+                <LinearLayout
+                    android:id="@+id/sort_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/sort_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:text="按赞数排序"
+                        android:textColor="@color/text_color3"
+                        android:textSize="@dimen/text_size14" />
+
+                    <ToggleButton
+                        android:layout_width="20dp"
+                        android:layout_height="12dp"
+                        android:id="@+id/sort_tgb"
+                        android:background="@android:color/transparent"
+                        android:drawableRight="@drawable/activity_open_close_selected"
+                        android:gravity="right"
+                        android:text=""
+                        android:textOff=""
+                        android:textOn="" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+        <com.jiaoshizige.teacherexam.utils.PullToRefreshLayoutRewrite
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/pulltorefresh"
+            app:view_empty="@layout/layout_empty"
+            app:view_error="@layout/layout_error"
+            android:layout_marginBottom="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/answer_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+        </com.jiaoshizige.teacherexam.utils.PullToRefreshLayoutRewrite>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:id="@+id/reply_content"
+            android:layout_width="0dp"
+            android:layout_height="33dp"
+            android:background="@color/normal_bg"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/reply"
+            android:layout_width="56dp"
+            android:layout_height="33dp"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:layout_marginRight="@dimen/margin_15"
+            android:background="@drawable/purple_shape"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size14"
+            android:text="发布" />
+    </LinearLayout>
+</RelativeLayout>

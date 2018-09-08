@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:orientation="vertical"
+        android:background="@android:color/transparent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/close"
+                android:background="@mipmap/home_icon_close_default"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/novice_pack"/>
+            <TextView
+                android:layout_width="240dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="@dimen/margin_30"
+                android:id="@+id/look_more"
+                android:textColor="#f76c5e"
+                android:gravity="center"
+                android:text="点击查看"
+                android:textSize="@dimen/text_size14"
+                android:background="@drawable/orange_shape"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

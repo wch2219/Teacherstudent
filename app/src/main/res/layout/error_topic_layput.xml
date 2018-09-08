@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/normal2">
+    <include layout="@layout/toolbar_layout"/>
+    <com.jiaoshizige.teacherexam.widgets.CustomExpandableListView
+        android:id="@+id/customexpandablelistView"
+        android:layout_width="match_parent"
+        android:groupIndicator="@null"
+        android:divider="@null"
+        android:layout_height="match_parent">
+
+    </com.jiaoshizige.teacherexam.widgets.CustomExpandableListView>
+
+</LinearLayout>

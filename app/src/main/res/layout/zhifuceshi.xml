@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <Button
+        android:layout_width="match_parent"
+        android:onClick="testAlipay"
+        android:layout_height="wrap_content"
+        android:text="使用支付宝支付"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn"
+        android:text="调支付宝接口"/>
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/weixin"
+        android:layout_height="wrap_content"
+        android:text="微信"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/weixinbtn"
+        android:text="调微信接口"/>
+
+</LinearLayout>

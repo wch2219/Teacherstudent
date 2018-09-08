@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal2"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <EditText
+        android:id="@+id/suggest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:gravity="left|top"
+        android:hint="请描述该题目的错误之处,感谢您的宝贵意见!(限制150个字)"
+        android:lines="10"
+        android:paddingLeft="@dimen/dp_15"
+        android:paddingRight="@dimen/dp_15"
+        android:paddingTop="@dimen/dp_15"
+        android:textColor="@color/text_color3"
+        android:textColorHint="@color/text_color"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/error_correct"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/white" />
+
+</LinearLayout>

@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginBottom="48dp">
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_above="@+id/main_tab" />
+
+    <RadioGroup
+        android:id="@+id/main_tab"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/main_study"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/study_home_bg"
+            android:gravity="center"
+            android:text="学习"
+            android:textColor="@drawable/tab_color_select"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/private_school"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/private_school_bg"
+            android:gravity="center"
+            android:text="选课"
+            android:textColor="@drawable/tab_color_select"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/open_class"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/open_class_bg"
+            android:gravity="center"
+            android:text="公开课"
+            android:textColor="@drawable/tab_color_select"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/mine"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/mine_bg"
+            android:gravity="center"
+            android:text="我的"
+            android:textColor="@drawable/tab_color_select"
+            android:textSize="10sp" />
+    </RadioGroup>
+</RelativeLayout>

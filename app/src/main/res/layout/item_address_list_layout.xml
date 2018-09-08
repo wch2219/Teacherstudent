@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/normal_bg"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/address_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_marginLeft="@dimen/dp_15"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/address_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@+id/address_name"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/sp_16" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/address_site"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/address_name"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_color3"
+        android:textSize="@dimen/sp_16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/normal_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <CheckBox
+            android:id="@+id/checkbox_address"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:button="@drawable/check_box_bg"
+            android:checked="false"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:padding="@dimen/margin_5"
+            android:text="设置为默认"
+            android:textColor="@color/text_color6"
+            android:textSize="14dp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:gravity="center_vertical">
+
+
+            <TextView
+                android:id="@+id/edit_address"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@mipmap/school_icon_edit_default"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="编辑"
+                android:textColor="@color/text_color6"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/delete_address"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@mipmap/school_icon_delete_default"
+                android:drawablePadding="10dp"
+                android:layout_marginLeft="@dimen/margin_30"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="@color/text_color6"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

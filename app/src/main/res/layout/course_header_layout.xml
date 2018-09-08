@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/normal_bg">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_shap_5"
+        android:paddingBottom="12dp"
+        android:id="@+id/course_item"
+        android:layout_marginTop="@dimen/margin_10"
+      android:paddingLeft="@dimen/dp_15"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+       >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+               >
+                <TextView
+                    android:id="@+id/class_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:text="0元体验专区"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    android:maxEms="14"
+                    android:drawableLeft="@mipmap/fire"
+                    android:drawablePadding="5dp"
+                    android:textColor="@color/text_color3"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/assistant_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxEms="40"
+                    android:singleLine="false"
+                    android:text="课程介绍"
+                    android:textColor="@color/text_color9"
+                    android:textSize="@dimen/text_size12" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:text="免费"
+                    android:id="@+id/market_price"
+                    android:textColor="@color/green1"
+                    android:textSize="20sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:text="(共6个课)"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:id="@+id/course"
+                    android:textColor="@color/text_color6"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="今日直播"
+                android:id="@+id/course_type"
+                android:gravity="center_horizontal"
+                android:paddingTop="3dp"
+                android:textSize="@dimen/text_size12"
+                android:textColor="@color/white"
+                android:background="@mipmap/biaoqian"/>
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="60dp"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_height="60dp"
+                android:layout_marginTop="12dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/learn_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="999"
+                    android:textColor="@color/purple4"
+                    android:textSize="@dimen/text_size11" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="人已领取"
+                    android:textColor="@color/text_color9"
+                    android:textSize="@dimen/text_size11" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
