@@ -13,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.easefun.polyvsdk.PolyvDownloader;
+import com.easefun.polyvsdk.PolyvDownloaderManager;
 import com.google.gson.Gson;
 import com.jiaoshizige.teacherexam.R;
 import com.jiaoshizige.teacherexam.activity.aaa.xx.adapter.DownManagerAdapter;
@@ -185,7 +187,16 @@ public class DownVideosMangerActivity extends AppCompatActivity implements DownM
                 if (allcheckNum == downIngBeans.size() + downSuccBeans.size()) {
 
                     PolyvDownloadSQLiteHelper.getInstance(ctx).deleteAll();
-                    getAll();
+                    for (int i = 0; i < downIngBeans.size(); i++) {
+                        List<PolyvDownloadInfo> downloadInfos = downIngBeans.get(i).getDownloadInfos();
+                        for (int j = 0; j < downloadInfos.size(); j++) {
+                            String vid = downloadInfos.get(j).getVid();
+                            int bitrate = downloadInfos.get(j).getBitrate();
+                            deleteLoadVideo(vid,bitrate);
+
+                        }
+
+                    }
                 } else {
                     for (DownManagerBean downIngBean : downIngBeans) {
                         if (downIngBean.isCheck()) {
@@ -195,6 +206,8 @@ public class DownVideosMangerActivity extends AppCompatActivity implements DownM
                     for (DownManagerBean downSuccBean : downSuccBeans) {
                         if (downSuccBean.isCheck()) {
                             PolyvDownloadSQLiteHelper.getInstance(ctx).deleteManager(downSuccBean.getCourse_id());
+                            //取得下载类实例
+
                         }
                     }
                 }
@@ -203,6 +216,12 @@ public class DownVideosMangerActivity extends AppCompatActivity implements DownM
         }
     }
 
+    /**
+     * 删除下载的视频
+     */
+    private void deleteLoadVideo(String videoId,int bitRate){
+        PolyvDownloader downloader = PolyvDownloaderManager.getPolyvDownloader(videoId, bitRate);
+    }
     private int allcheckNum;
 
     @Override

@@ -83,12 +83,25 @@
         android:layout_height="0.5dp"
         android:background="#EEE"
         />
-
-        <android.support.v7.widget.RecyclerView
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/rv_list"
-            ></android.support.v7.widget.RecyclerView>
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <include
+                layout="@layout/item_manager_pross_item"
+                />
+            <com.jiaoshizige.teacherexam.activity.aaa.xx.utils.MyRecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_list"
+                ></com.jiaoshizige.teacherexam.activity.aaa.xx.utils.MyRecyclerView>
+        </LinearLayout>
+        </ScrollView>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

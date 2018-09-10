@@ -73,16 +73,18 @@ public class DownManagerproAdapter extends RecyclerView.Adapter<DownManagerproAd
                         DOWNTYPE = DOWNING;
                         WcHLogUtils.I("显示速度:"+polyvDownloadInfo.getDownspend()+"------下载进度:"+polyvDownloadInfo.getProgress());
                         holder.setText(R.id.tv_downType, FormatUtil.sizeFormatNum2String(polyvDownloadInfo.getDownspend()));
-                        downloader.setPolyvDownloadSpeedListener(new IPolyvDownloaderSpeedListener() {
-                            @Override
-                            public void onSpeed(int i) {
-                                WcHLogUtils.I("下载速度"+i);
-                                PolyvDownloadSQLiteHelper.getInstance(ctx).upDownSpan(i,polyvDownloadInfo.getVid(),polyvDownloadInfo.getBitrate());
-                                if (downSpenListener != null) {
-                                    downSpenListener.upUi();
-                                }
-                            }
-                        });
+//                        downloader.setPolyvDownloadSpeedListener(new IPolyvDownloaderSpeedListener() {
+//                            @Override
+//                            public void onSpeed(int i) {
+////                                WcHLogUtils.I("下载速度"+i);
+////                                PolyvDownloadSQLiteHelper.getInstance(ctx).upDownSpan(i,polyvDownloadInfo.getVid(),polyvDownloadInfo.getBitrate());
+////                                int downSpan = PolyvDownloadSQLiteHelper.getInstance(ctx).getDownSpan(polyvDownloadInfo.getVid(), polyvDownloadInfo.getBitrate());
+////                                WcHLogUtils.I("获取下载速度:"+downSpan);
+//                                if (downSpenListener != null) {
+//                                    downSpenListener.upUi();
+//                                }
+//                            }
+//                        });
                     } else {
                         long progree = PolyvDownloadSQLiteHelper.getInstance(ctx).getProgree(polyvDownloadInfo.getVid());
                         if (progree>0) {

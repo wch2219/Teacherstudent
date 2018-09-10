@@ -84,7 +84,7 @@ public class DownService extends Service{
         downListener(vid, bitRate);
     }
 
-    private void downListener(final String vid, int bitRate) {
+    private void downListener(final String vid, final int bitRate) {
         PolyvDownloader downloader = PolyvDownloaderManager.getPolyvDownloader(vid, bitRate);
         downloader.start(ctx);
         downloader.setPolyvDownloadProressListener(new IPolyvDownloaderProgressListener() {
@@ -113,6 +113,7 @@ public class DownService extends Service{
             @Override
             public void onSpeed(int i) {
                 WcHLogUtils.I(i+"下载速度");
+                PolyvDownloadSQLiteHelper.getInstance(ctx).upDownSpan(i,vid,bitRate);
             }
         });
     }

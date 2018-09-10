@@ -252,15 +252,46 @@ public class PolyvDownloadSQLiteHelper extends SQLiteOpenHelper {
         db.execSQL(sql,new Object[]{span,vid,bitrate});
     }
 
-    public void getDownSpan(String vid,int bitrate){
+    public PolyvDownloadInfo getDownSpan(String vid, int bitrate){
         SQLiteDatabase db = getWritableDatabase();
-        String sql = "select downspend from downloadlist where vid=? and bitrate=?";
+        String sql = "select * from downloadlist where vid=? and bitrate=?";
         Cursor cursor = db.rawQuery(sql, new String[]{vid, String.valueOf(bitrate)});
+        PolyvDownloadInfo downIngData = new PolyvDownloadInfo();
         while (cursor.moveToNext()){
-            cursor.getInt(cursor.getColumnIndex("downspend"));
-
-
+            String title = cursor.getString(cursor.getColumnIndex("title"));
+            String duration = cursor.getString(cursor.getColumnIndex("duration"));
+            long filesize = cursor.getInt(cursor.getColumnIndex("filesize"));
+            long percent = cursor.getInt(cursor.getColumnIndex("percent"));
+            long total = cursor.getInt(cursor.getColumnIndex("total"));
+            int progress = cursor.getInt(cursor.getColumnIndex("progress"));
+            String chapter = cursor.getString(cursor.getColumnIndex("chapter"));
+            int parent_id = cursor.getInt(cursor.getColumnIndex("parent_id"));
+            int course_id = cursor.getInt(cursor.getColumnIndex("course_id"));
+            String classname = cursor.getString(cursor.getColumnIndex("classname"));
+            String chapter_id = cursor.getString(cursor.getColumnIndex("chapter_id"));
+            String section_id = cursor.getString(cursor.getColumnIndex("section_id"));
+            String section_name = cursor.getString(cursor.getColumnIndex("section_name"));
+            String learn_time = cursor.getString(cursor.getColumnIndex("learn_time"));
+            String type = cursor.getString(cursor.getColumnIndex("type"));
+//                int class_id = cursor.getInt(cursor.getColumnIndex("class_id"));
+            int sid = cursor.getInt(cursor.getColumnIndex("sid"));
+            int downspend = cursor.getInt(cursor.getColumnIndex("downspend"));
+            PolyvDownloadInfo info = new PolyvDownloadInfo(vid, duration, filesize, bitrate, title, progress, chapter);
+            info.setPercent(percent);
+            info.setTotal(total);
+            info.setCourse_id(course_id);
+            info.setParent_id(parent_id);
+            info.setSid(sid);
+            info.setClassname(classname);
+            info.setChapter_id(chapter_id);
+            info.setSection_id(section_id);
+            info.setSection_name(section_name);
+            info.setLearn_time(learn_time);
+            info.setType(type);
+            info.setDownspend(downspend);
+            downIngData = info;
         }
+        return downIngData;
     }
     /**
      * 判断该下载信息是否已以添加过
@@ -397,6 +428,7 @@ public class PolyvDownloadSQLiteHelper extends SQLiteOpenHelper {
                 String type = cursor.getString(cursor.getColumnIndex("type"));
 //                int class_id = cursor.getInt(cursor.getColumnIndex("class_id"));
                 int sid = cursor.getInt(cursor.getColumnIndex("sid"));
+                int downspend = cursor.getInt(cursor.getColumnIndex("downspend"));
                 PolyvDownloadInfo info = new PolyvDownloadInfo(vid, duration, filesize, bitrate, title, progress, chapter);
                 info.setPercent(percent);
                 info.setTotal(total);
@@ -409,6 +441,7 @@ public class PolyvDownloadSQLiteHelper extends SQLiteOpenHelper {
                 info.setSection_name(section_name);
                 info.setLearn_time(learn_time);
                 info.setType(type);
+                info.setDownspend(downspend);
 //                info.setClass_id(class_id);
                 infos.addLast(info);
             }
